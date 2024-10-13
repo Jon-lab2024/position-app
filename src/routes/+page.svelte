@@ -171,6 +171,22 @@
         const response = await fetch('melbourne.geojson')
         geojsonData = await response.json()
     })
+
+    import { getUserLocationWithGNSSStatus } from '$lib/utils';
+
+    let locationMessage = "";
+
+    onMount(() => {
+        getUserLocationWithGNSSStatus()
+            .then(({ coords, isGNSS, message }) => {
+                locationMessage = message;
+                console.log('Coordinates:', coords);
+                // You can use coords and isGNSS here for further logic if needed
+            })
+            .catch((error) => {
+                locationMessage = "Error getting location: " + error.message;
+            });
+    });
 </script>
 
 <!-- Everything after <script> will be HTML for rendering -->
@@ -341,11 +357,11 @@
         {#each markers as { lngLat, label, name }, i (i)}
             <Marker
                 {lngLat}
-                class="grid h-8 w-14 place-items-center rounded-md border
+                class="grid h-8 w-20 place-items-center rounded-md border
                     border-gray-200 bg-red-300 text-black shadow-2xl
                     focus:outline-2 focus:outline-black"
             >
-                <span>
+                <span class="text-lg">
                     {label}
                 </span>
 
@@ -369,3 +385,12 @@
 </div>
 
 <!-- Optionally, you can have a <style> tag for CSS at the end, but with TailwindCSS it is usually not necessary -->
+
+<style>
+    h1 {
+        color: #ff3e00;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 200;
+    }
+</style>

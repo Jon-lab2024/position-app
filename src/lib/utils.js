@@ -53,3 +53,25 @@ export function getDistance(markers) {
 
     return distance
 }
+
+export function getUserLocationWithGNSSStatus() {
+  return new Promise((resolve, reject) => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const coords = position.coords;
+          const isGNSS = coords.accuracy <= 20; // Assuming GNSS accuracy is 20 meters or better
+          resolve({ 
+            coords, 
+            isGNSS,
+            message: isGNSS ? "" : "Location is NOT from GNSS"
+          });
+        },
+        (error) => reject(error),
+        { enableHighAccuracy: true }
+      );
+    } else {
+      reject(new Error('Geolocation is not supported by this browser.'));
+    }
+  });
+}
