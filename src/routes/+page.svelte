@@ -175,11 +175,13 @@
     import { getUserLocationWithGNSSStatus } from '$lib/utils';
 
     let locationMessage = "";
+    let isGNSS = null;
 
     onMount(() => {
         getUserLocationWithGNSSStatus()
-            .then(({ coords, isGNSS, message }) => {
+            .then(({ coords, isGNSS: gnssStatus, message }) => {
                 locationMessage = message;
+                isGNSS = gnssStatus; // Add this line
                 console.log('Coordinates:', coords);
                 // You can use coords and isGNSS here for further logic if needed
             })
@@ -377,7 +379,9 @@
         {#if watchedMarker.lngLat}
             <DefaultMarker lngLat={watchedMarker.lngLat}>
                 <Popup offset={[0, -10]}>
-                    <div class="text-lg font-bold">You</div>
+                    <div class="text-lg font-bold">
+                        {isGNSS ? 'You' : 'No GNSS'}
+                    </div>
                 </Popup>
             </DefaultMarker>
         {/if}
