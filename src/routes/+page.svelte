@@ -12,14 +12,14 @@
 
     // Predefined markers with names and images
     let markers = [
-        { lngLat: { lng: 144.96459814751478, lat: -37.80995056223396 }, label: 'Marker 1', name: 'State Library', image: '/images/State Library.jpg', modalShown: false },
+        { lngLat: { lng: 144.96459814751478, lat: -37.80995056223396 }, label: 'Marker 1', name: 'State Library', image: '/images/State_Library.jpg', modalShown: false },
         { lngLat: { lng: 144.96318039790924, lat: -37.808357984258315 }, label: 'Marker 2', name: 'RMIT', image: '/images/RMIT.jpg', modalShown: false },
-        { lngLat: { lng: 144.96917684226275, lat: -37.817900704255486 }, label: 'Marker 3', name: 'Federation Square', image: '/images/Federation Square.jpg', modalShown: false },
-        { lngLat: { lng: 144.96704004380317, lat: -37.818197131671816 }, label: 'Marker 4', name: 'Flinders st station', image: '/images/Flinders st station.jpg', modalShown: false },
-        { lngLat: { lng: 144.95251801634004, lat: -37.818339416930115 }, label: 'Marker 5', name: 'SouthernCross Station', image: '/images/SouthernCross Station.jpg', modalShown: false },
-        { lngLat: { lng: 144.9567645161061, lat: -37.80713929364221 }, label: 'Marker 6', name: 'Queen Victoria Market', image: '/images/Queen Victoria Market.jpg', modalShown: false },
-        { lngLat: { lng: 144.95829663666132, lat: -37.81375690238818 }, label: 'Marker 7', name: 'Supreme Court', image: '/images/Supreme Court.jpg', modalShown: false },
-        { lngLat: { lng: 144.96239751929886, lat: -37.82058741142394 }, label: 'Marker 8', name: 'Sandridge Bridge', image: '/images/Sandridge Bridge.jpg', modalShown: false }
+        { lngLat: { lng: 144.96917684226275, lat: -37.817900704255486 }, label: 'Marker 3', name: 'Federation Square', image: '/images/Federation_Square.jpg', modalShown: false },
+        { lngLat: { lng: 144.96704004380317, lat: -37.818197131671816 }, label: 'Marker 4', name: 'Flinders st station', image: '/images/FlindersSt_Station.jpg', modalShown: false },
+        { lngLat: { lng: 144.95251801634004, lat: -37.818339416930115 }, label: 'Marker 5', name: 'SouthernCross Station', image: '/images/SouthernCross_Station.jpg', modalShown: false },
+        { lngLat: { lng: 144.9567645161061, lat: -37.80713929364221 }, label: 'Marker 6', name: 'Queen Victoria Market', image: '/images/Queen_Victoria_Market.jpg', modalShown: false },
+        { lngLat: { lng: 144.95829663666132, lat: -37.81375690238818 }, label: 'Marker 7', name: 'Supreme Court', image: '/images/Supreme_Court.jpg', modalShown: false },
+        { lngLat: { lng: 144.96239751929886, lat: -37.82058741142394 }, label: 'Marker 8', name: 'Sandridge Bridge', image: '/images/Sandridge_Bridge.jpg', modalShown: false }
     ];
 
     let bounds = getMapBounds(markers);
@@ -119,7 +119,15 @@
     <div class="bg-white p-5 rounded-lg w-1/2 relative">
         <button class="absolute top-2 right-2 text-xl font-bold" on:click={closeModal}>X</button>
         <h1 class="text-2xl font-bold mb-4">{selectedPlace.name}</h1>
-        <img src={selectedPlace.image} alt={selectedPlace.name} class="w-full h-auto" on:error={(e) => e.target.src = '/images/placeholder.jpg'} />
+        <img 
+          src={selectedPlace.image} 
+          alt={selectedPlace.name} 
+          class="w-full h-auto"
+          on:error={(e) => {
+            console.error(`Failed to load image: ${selectedPlace.image}`);
+            e.target.src = '/images/placeholder.jpg';
+          }}
+        />
     </div>
 </div>
 {/if}
