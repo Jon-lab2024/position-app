@@ -35,7 +35,7 @@
     let count = 0
     let locationMessage = "";
     let isGNSS = null;
-The count will go up by one each time you are within 10 meters
+    // The count will go up by one each time you are within 10 meters
     // Functions
     function addMarker(e, label, name) {
         markers = [...markers, { lngLat: e.detail.lngLat, label, name }]
