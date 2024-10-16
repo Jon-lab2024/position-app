@@ -71,9 +71,17 @@
             if (!marker.modalShown) {
                 const distance = getDistance([watchedMarker, marker]);
                 if (distance <= 50) {
-                    openModal(marker);
-                    marker.modalShown = true;
-                    count++;  // Increment count for proximity markers
+                    if (marker && marker.name && marker.image) {
+                        selectedPlace = {
+                            name: marker.name,
+                            image: marker.image
+                        };
+                        showModal = true;
+                        marker.modalShown = true;
+                    } else {
+                        console.log('No valid data for this marker:', marker);
+                        return; // Do nothing if marker data is invalid
+                    }
                 }
             }
         });
@@ -85,7 +93,13 @@
 
     $: if (success) {
         coords = [position.coords.longitude, position.coords.latitude];
-        markers = [...markers, { lngLat: { lng: coords[0], lat: coords[1] }, label: 'Current', modalShown: false }];
+        markers = [...markers, {
+            lngLat: { lng: coords[0], lat: coords[1] },
+            label: 'Current', // No name or image for current location
+            name: null,       // Intentionally left null
+            image: null,      // Intentionally left null
+            modalShown: false
+        }];
     }
 
     $: if (watchedPosition.coords) {
