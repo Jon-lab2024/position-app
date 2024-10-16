@@ -135,7 +135,7 @@
     onMount(async () => {
         const response = await fetch('melbourne.geojson');
         geojsonData = await response.json();
-        const poiResponse = await fetch('/tourism.geojson');
+        const poiResponse = await fetch('tourism.geojson');
         poiData = await poiResponse.json();
         
         // Filter POI data to include only tourism-related places
