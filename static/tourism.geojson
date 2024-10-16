@@ -1,0 +1,5103 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2024-10-16T10:41:00Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/113541227",
+        "name": "Rendezvous Grand Hotel Melbourne",
+        "tourism": "hotel",
+        "website": "https://www.tfehotels.com/brands/rendezvous-hotels/rendezvous-hotel-melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96362,
+          -37.818194
+        ]
+      },
+      "id": "node/113541227"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/114574448",
+        "addr:housenumber": "270",
+        "addr:street": "Flinders Street",
+        "brand": "DoubleTree",
+        "brand:wikidata": "Q2504643",
+        "brand:wikipedia": "en:DoubleTree",
+        "building": "yes",
+        "contact:facebook": "https://www.facebook.com/DoubleTreeHiltonFlindersStreet",
+        "contact:instagram": "https://www.instagram.com/doubletreemelbourne",
+        "contact:youtube": "https://www.youtube.com/channel/UCpuF2JsgWLZeO0nCFaaqtXg",
+        "email": "melfs_res@hilton.com",
+        "internet_access": "wlan",
+        "name": "DoubleTree by Hilton Hotel Melbourne - Flinders Street",
+        "official_name": "DoubleTree by Hilton",
+        "operator": "Hilton",
+        "phone": "+61 3 9654 6888",
+        "rooms": "187",
+        "stars": "4.5",
+        "tourism": "hotel",
+        "website": "https://www.hilton.com/en/hotels/melfsdi-doubletree-melbourne-flinders-street/",
+        "wheelchair": "yes",
+        "wikidata": "Q33382454"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9653561,
+          -37.8177285
+        ]
+      },
+      "id": "node/114574448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/114607288",
+        "addr:housenumber": "267",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Flinders Lane",
+        "name": "Punt Hill Apartment Hotel",
+        "tourism": "hotel",
+        "website": "https://www.punthill.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9655353,
+          -37.8170329
+        ]
+      },
+      "id": "node/114607288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/122741147",
+        "name": "Crown Towers Hotel",
+        "phone": "+61 3 9292 6868",
+        "tourism": "hotel",
+        "website": "https://www.crownhotels.com.au/crown-towers-melbourne/default-en.html",
+        "wikidata": "Q28224275"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96008,
+          -37.8224974
+        ]
+      },
+      "id": "node/122741147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/130015082",
+        "addr:housenumber": "205",
+        "addr:street": "Collins Street",
+        "brand": "Westin",
+        "brand:wikidata": "Q1969162",
+        "brand:wikipedia": "en:Westin Hotels & Resorts",
+        "name": "The Westin Melbourne",
+        "operator": "Starwood Hotels & Resorts",
+        "phone": "+61 3 9635 2222",
+        "tourism": "hotel",
+        "website": "http://www.westinmelbourne.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.967378,
+          -37.815815
+        ]
+      },
+      "id": "node/130015082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/130015233",
+        "created_by": "JOSM",
+        "name": "Adelphi Hotel",
+        "tourism": "hotel",
+        "wikidata": "Q20085675"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683785,
+          -37.816309
+        ]
+      },
+      "id": "node/130015233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/131107666",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "471",
+        "addr:postcode": "3000",
+        "addr:street": "Little Bourke Street",
+        "name": "Mantra on Little Bourke",
+        "phone:AU": "1300 987 604",
+        "tourism": "hotel",
+        "website": "https://www.mantra.com.au/victoria/melbourne-and-surrounds/melbourne/accommodation/hotels/mantra-on-little-bourke/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9590572,
+          -37.8145395
+        ]
+      },
+      "id": "node/131107666"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/145193705",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "630",
+        "addr:postcode": "3000",
+        "addr:street": "Little Collins Street",
+        "internet_access": "wlan",
+        "name": "Vibe Savoy Hotel",
+        "operator": "TFE hotels",
+        "phone": "+61 3 9622 8888",
+        "smoking": "no",
+        "tourism": "hotel",
+        "website": "https://www.tfehotels.com/brands/vibe-hotels/vibe-savoy-hotel-melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9539372,
+          -37.8178023
+        ]
+      },
+      "id": "node/145193705"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/145246218",
+        "brand": "The Sebel",
+        "brand:wikidata": "Q110888248",
+        "name": "Sebel Melbourne",
+        "tourism": "hotel",
+        "website": "http://accorhotels.com.au/accommodation/melbourne-vic/sebel-melbourne-flinders-lane"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9612323,
+          -37.816731
+        ]
+      },
+      "id": "node/145246218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/163378510",
+        "addr:housenumber": "287",
+        "addr:street": "King Street",
+        "name": "Hotel Sophia",
+        "phone": "+61 3 9670 1342",
+        "tourism": "hotel",
+        "website": "https://www.hotelsophia.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9542371,
+          -37.8137769
+        ]
+      },
+      "id": "node/163378510"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/164077659",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "600",
+        "addr:postcode": "3000",
+        "addr:street": "Little Bourke Street",
+        "brand": "Ibis",
+        "brand:wikidata": "Q920166",
+        "brand:wikipedia": "en:Ibis (hotel)",
+        "name": "Melbourne CBD Hotel",
+        "operator": "Yeh's Group",
+        "phone": "+61 3 9672 0000",
+        "tourism": "hotel",
+        "website": "https://www.accorhotels.com/gb/hotel-3030-ibis-melbourne-little-bourke-street/index.shtml",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9546001,
+          -37.8154676
+        ]
+      },
+      "id": "node/164077659"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/164086401",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "197-199",
+        "addr:postcode": "3000",
+        "addr:street": "King Street",
+        "name": "King Street Backpackers",
+        "phone": "+61 3 9670 1111",
+        "tourism": "hostel",
+        "website": "http://www.kingstreetbackpackers.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.955062,
+          -37.8155762
+        ]
+      },
+      "id": "node/164086401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/174844923",
+        "addr:housenumber": "270",
+        "addr:street": "Collins Street",
+        "brand": "Novotel",
+        "brand:wikidata": "Q420545",
+        "brand:wikipedia": "en:Novotel",
+        "building": "retail",
+        "name": "Novotel Melbourne on Collins",
+        "operator": "Accor Hotels",
+        "phone": "+61 3 9667 5800",
+        "toilets:wheelchair": "yes",
+        "tourism": "hotel",
+        "website": "https://www.novotelmelbourne.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.964928,
+          -37.815685
+        ]
+      },
+      "id": "node/174844923"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/176668273",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "195",
+        "addr:postcode": "3000",
+        "addr:street": "Swanston Street",
+        "name": "Melbourne On Swanston Hotel",
+        "operator": "Pullman Hotels and Resorts",
+        "tourism": "hotel",
+        "website": "http://www.theswanstonhotel.com.au",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9649711,
+          -37.8130976
+        ]
+      },
+      "id": "node/176668273"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/176681485",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "318",
+        "addr:postcode": "3000",
+        "addr:street": "Little Bourke Street",
+        "name": "BreakFree Heritage on Little Bourke",
+        "tourism": "hotel",
+        "website": "https://www.breakfree.com.au/heritage-on-little-bourke/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631368,
+          -37.8129338
+        ]
+      },
+      "id": "node/176681485"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/304170568",
+        "artist_name": "Inge King",
+        "name": "Forward Surge",
+        "tourism": "artwork",
+        "wikidata": "Q27477315"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9682676,
+          -37.8205873
+        ]
+      },
+      "id": "node/304170568"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/304710201",
+        "artist_name": "Ron Robertson-Swann",
+        "artwork_type": "sculpture",
+        "name": "Vault (The Yellow Peril)",
+        "tourism": "artwork",
+        "wikidata": "Q2254184",
+        "wikipedia": "en:Vault (sculpture)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9677384,
+          -37.8260682
+        ]
+      },
+      "id": "node/304710201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/319157891",
+        "name": "Downtowner on Lygon",
+        "note": "Accessibility: category 6",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.966381,
+          -37.8052797
+        ]
+      },
+      "id": "node/319157891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/370744902",
+        "addr:housenumber": "220",
+        "addr:street": "Lygon Street",
+        "name": "Lygon Lodge",
+        "tourism": "motel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9669884,
+          -37.801908
+        ]
+      },
+      "id": "node/370744902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/450395142",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "33",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Spencer Street",
+        "addr:suburb": "Melbourne",
+        "name": "Grand Hotel Melbourne",
+        "phone": "+61 3 9611 4567",
+        "tourism": "hotel",
+        "website": "https://www.grandhotelmelbourne.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9542549,
+          -37.8200975
+        ]
+      },
+      "id": "node/450395142"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/577520970",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9754744,
+          -37.8196565
+        ]
+      },
+      "id": "node/577520970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/589399515",
+        "artwork_type": "statue",
+        "name": "Major General Charles George Gordon",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9737458,
+          -37.8123562
+        ]
+      },
+      "id": "node/589399515"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/591391653",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "250",
+        "addr:postcode": "3000",
+        "addr:street": "Flinders Street",
+        "email": "stay@unitedbackpackers.com.au",
+        "internet_access": "wlan",
+        "name": "United Backpackers",
+        "phone": "+61 3 9663 7001",
+        "tourism": "hostel",
+        "website": "https://unitedbackpackers.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9661635,
+          -37.8176298
+        ]
+      },
+      "id": "node/591391653"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/592833686",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "161",
+        "addr:postcode": "3000",
+        "addr:street": "Flinders Lane",
+        "name": "Flinders Landing Apartments",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9690557,
+          -37.8160266
+        ]
+      },
+      "id": "node/592833686"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/594172505",
+        "addr:housenumber": "228",
+        "addr:street": "Flinders Lane",
+        "name": "The Greenhouse Backpacker",
+        "tourism": "hostel",
+        "website": "http://www.greenhousebackpacker.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9663777,
+          -37.8164799
+        ]
+      },
+      "id": "node/594172505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/594192881",
+        "addr:housenumber": "67",
+        "addr:street": "Bourke Street",
+        "name": "City Square Motel",
+        "operator": "EconoLodge",
+        "phone": "+61 3 9654 7011",
+        "tourism": "motel",
+        "website": "https://citysquaremotel.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.966553,
+          -37.815983
+        ]
+      },
+      "id": "node/594192881"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/594365265",
+        "addr:housenumber": "20",
+        "addr:postcode": "3002",
+        "addr:state": "VIC",
+        "addr:street": "Spring Street",
+        "addr:suburb": "East Melbourne",
+        "fee": "no",
+        "museum": "history",
+        "name": "Old Treasury Building Museum",
+        "opening_hours": "Su-Fr 10:00-16:00",
+        "tourism": "museum",
+        "website": "https://www.oldtreasurybuilding.org.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9743546,
+          -37.8131993
+        ]
+      },
+      "id": "node/594365265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/595501879",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "16",
+        "addr:postcode": "3000",
+        "addr:street": "Spencer Street",
+        "air_conditioning": "yes",
+        "brand": "Best Western",
+        "brand:wikidata": "Q830334",
+        "email": "contact@bestwesternmelbourne.com.au",
+        "fax": "+61 3 9621 1922",
+        "internet_access": "wlan",
+        "internet_access:ssid": "Best Western Guest Access",
+        "name": "Best Western Melbourne City Hotel",
+        "operator": "Best Western",
+        "phone": "+61 3 9621 3333",
+        "reservation": "yes",
+        "tourism": "hotel",
+        "website": "https://www.bestwesternmelbourne.com.au",
+        "wheelchair": "designated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9551367,
+          -37.8205345
+        ]
+      },
+      "id": "node/595501879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/595504813",
+        "addr:housenumber": "39",
+        "addr:street": "Gisborne Street",
+        "fee": "yes",
+        "name": "Fire Services Museum",
+        "opening_hours": "Th-Fr 09:00-15:00; Su 10:00-16:00",
+        "phone": "+61 3 9662 2907",
+        "start_date": "1979-09",
+        "tourism": "museum",
+        "website": "https://www.fsmv.net.au/",
+        "wikidata": "Q5330187"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9754517,
+          -37.8085973
+        ]
+      },
+      "id": "node/595504813"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/597558756",
+        "addr:housenumber": "172",
+        "addr:street": "William Street",
+        "name": "Quest on William",
+        "tourism": "hotel",
+        "website": "https://www.questapartments.com.au/Accommodation/56/Australia/Melbourne_CBD/Quest_On_William/Welcome.aspx",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9582123,
+          -37.8149908
+        ]
+      },
+      "id": "node/597558756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/598032208",
+        "addr:housenumber": "182",
+        "addr:street": "Collins Street",
+        "name": "Adara Collins Hotel",
+        "tourism": "hotel",
+        "website": "https://www.questapartments.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9674253,
+          -37.8146876
+        ]
+      },
+      "id": "node/598032208"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/598400057",
+        "name": "Causeway Inn on the Mall",
+        "tourism": "hotel",
+        "website": "https://www.causeway.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9641702,
+          -37.8143219
+        ]
+      },
+      "id": "node/598400057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/599928123",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "26",
+        "addr:postcode": "3000",
+        "addr:street": "Flinders Street",
+        "building": "retail",
+        "name": "Hotel Lindrum",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9736037,
+          -37.8152818
+        ]
+      },
+      "id": "node/599928123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/603633123",
+        "addr:city": "North Melbourne",
+        "addr:housenumber": "238",
+        "addr:postcode": "3051",
+        "addr:street": "Victoria Street",
+        "name": "Global Backpackers",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9585654,
+          -37.8059962
+        ]
+      },
+      "id": "node/603633123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/607756377",
+        "name": "Flinders Station Hotel",
+        "tourism": "hostel",
+        "website": "https://flindersbackpackers.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9643336,
+          -37.8174426
+        ]
+      },
+      "id": "node/607756377"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/611984580",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "353",
+        "addr:postcode": "3000",
+        "addr:street": "Little Collins Street",
+        "contact:email": "reservations@causeway.com.au",
+        "name": "Causeway 353 Hotel",
+        "tourism": "hotel",
+        "website": "https://www.causeway.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9630281,
+          -37.8157451
+        ]
+      },
+      "id": "node/611984580"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/611984584",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "380",
+        "addr:postcode": "3000",
+        "addr:street": "Collins Street",
+        "fee": "no",
+        "name": "ANZ Banking Museum",
+        "tourism": "museum",
+        "wheelchair": "no",
+        "wikidata": "Q53695886"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9618745,
+          -37.8166364
+        ]
+      },
+      "id": "node/611984584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/612015199",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "97-103",
+        "addr:postcode": "3000",
+        "addr:street": "Elizabeth Street",
+        "brand": "Ibis Budget",
+        "brand:wikidata": "Q1458135",
+        "brand:wikipedia": "en:Ibis Budget",
+        "name": "Ibis Budget",
+        "tourism": "hotel",
+        "website": "http://ibisbudgethotel.ibis.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.963508,
+          -37.815921
+        ]
+      },
+      "id": "node/612015199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/612726069",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "392",
+        "addr:postcode": "3000",
+        "addr:street": "Little Collins Street",
+        "name": "Quest Fairfax House",
+        "phone": "+61 3 9642 1333",
+        "tourism": "hotel",
+        "website": "https://plus.google.com/102566616867035935655/about?gl=au&hl=en"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9615618,
+          -37.8156454
+        ]
+      },
+      "id": "node/612726069"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/621048440",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "113",
+        "addr:postcode": "3000",
+        "addr:street": "Queen Street",
+        "name": "Citiclub Hotel",
+        "phone": "+61 3 9602 1800",
+        "tourism": "hotel",
+        "website": "https://www.cqmelbourne.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9607223,
+          -37.8157717
+        ]
+      },
+      "id": "node/621048440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/621533164",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "189",
+        "addr:postcode": "3000",
+        "addr:street": "Queen Street",
+        "brand": "Adina Hotels",
+        "brand:wikidata": "Q50406079",
+        "name": "Adina Apartment Hotel Melbourne",
+        "phone": "+61 3 9934 0000",
+        "tourism": "hotel",
+        "website": "https://www.adinahotels.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9600094,
+          -37.8143488
+        ]
+      },
+      "id": "node/621533164"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/622803015",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "575",
+        "addr:postcode": "3000",
+        "addr:street": "Flinders Lane",
+        "brand": "Holiday Inn",
+        "brand:wikidata": "Q2717882",
+        "brand:wikipedia": "en:Holiday Inn",
+        "building": "retail",
+        "name": "Holiday Inn Melbourne on Flinders",
+        "phone": "+61 3 9629 4111",
+        "tourism": "hotel",
+        "website": "http://melbourne.holidayinn.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9550026,
+          -37.8201786
+        ]
+      },
+      "id": "node/622803015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/622819429",
+        "addr:housenumber": "636",
+        "addr:street": "Bourke Street",
+        "name": "Alto Hotel on Bourke",
+        "phone": "+61 3 8608 5500",
+        "tourism": "hotel",
+        "website": "https://www.altohotel.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9547964,
+          -37.8163983
+        ]
+      },
+      "id": "node/622819429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/624924103",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "1",
+        "addr:postcode": "3000",
+        "addr:street": "William Street",
+        "name": "Clarion Suites Gateway",
+        "phone": "+61 3 9296 8888",
+        "tourism": "hotel",
+        "website": "https://www.clarionsuitesgateway.com.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9595214,
+          -37.8194275
+        ]
+      },
+      "id": "node/624924103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/626259676",
+        "name": "Rialto Observation Deck",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9576693,
+          -37.8188397
+        ]
+      },
+      "id": "node/626259676"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/642333245",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "66",
+        "addr:postcode": "3000",
+        "addr:street": "Bourke Street",
+        "amenity": "cafe",
+        "building": "retail",
+        "name": "Pellegrini's",
+        "phone": "+61 3 9662 1885",
+        "tourism": "attraction",
+        "wikidata": "Q58481453"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.971173,
+          -37.811722
+        ]
+      },
+      "id": "node/642333245"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/652430574",
+        "addr:housenumber": "8",
+        "addr:street": "Royal Lane",
+        "name": "Quest Royal Gardens",
+        "phone": "+61 3 9419 9888",
+        "tourism": "hotel",
+        "website": "https://www.questroyalgardens.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.975147,
+          -37.804755
+        ]
+      },
+      "id": "node/652430574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/659635763",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "131",
+        "addr:postcode": "3000",
+        "addr:street": "King Street",
+        "brand": "Ibis Styles",
+        "brand:wikidata": "Q3147425",
+        "brand:wikipedia": "en:Ibis Styles",
+        "contact:website": "http://www.kingsgatehotel.com.au",
+        "name": "Ibis Styles Kingsgate Hotel",
+        "operator": "Accor",
+        "phone": "+61 3 9629 4171",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9557516,
+          -37.8169709
+        ]
+      },
+      "id": "node/659635763"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/663479931",
+        "name": "Artspace Gallery",
+        "tourism": "gallery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9678314,
+          -37.8252613
+        ]
+      },
+      "id": "node/663479931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/663479932",
+        "addr:housenumber": "40",
+        "addr:postcode": "3006",
+        "addr:state": "VIC",
+        "addr:street": "Dodds Street",
+        "addr:suburb": "Southbank",
+        "check_date": "2024-09-05",
+        "description": "The Fiona and Sidney Myer Gallery (formerly the Margaret Lawrence Gallery) is a highly influential curatorial art space frequented by the general public and artists at all stages of their career.",
+        "email": "ml-gallery@unimelb.edu.au",
+        "internet_access": "yes",
+        "internet_access:fee": "customers",
+        "internet_access:ssid": "Unimelb, Eduroam",
+        "name": "Fiona & Sidney Myer Gallery",
+        "opening_hours": "Tu-Sa 12:00-17:00",
+        "operator": "University of Melbourne",
+        "phone": "+61 3 9035 9400",
+        "toilets": "yes",
+        "tourism": "gallery",
+        "website": "https://finearts-music.unimelb.edu.au/about-us/fiona-and-sidney-myer-gallery",
+        "wheelchair": "yes",
+        "wikidata": "Q319078",
+        "wikipedia": "en:University of Melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.967941,
+          -37.8255106
+        ]
+      },
+      "id": "node/663479932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/663532430",
+        "addr:housenumber": "13",
+        "addr:street": "Spring Street",
+        "brand": "Mercure",
+        "brand:wikidata": "Q1709809",
+        "brand:wikipedia": "en:Mercure (hotel)",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Mercure Melbourne Treasury Gardens",
+        "operator": "Accor Hotels",
+        "phone": "+61 3 9205 9999",
+        "tourism": "hotel",
+        "website": "http://mercuremelbourne.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.974243,
+          -37.814772
+        ]
+      },
+      "id": "node/663532430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/664321499",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "205",
+        "addr:postcode": "3000",
+        "addr:street": "King Street",
+        "name": "Melbourne Connection Travellers Hostel",
+        "phone": "+61 3 9642 4464",
+        "tourism": "hostel",
+        "website": "http://www.melbourneconnection.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9550159,
+          -37.8153727
+        ]
+      },
+      "id": "node/664321499"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/667680172",
+        "addr:housenumber": "100",
+        "addr:street": "Exhibition Street",
+        "name": "Mantra 100 Exhibition",
+        "phone": "+61 3 9631 4444",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9714894,
+          -37.8133608
+        ]
+      },
+      "id": "node/667680172"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/673979083",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9689867,
+          -37.8241127
+        ]
+      },
+      "id": "node/673979083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/706906596",
+        "addr:housenumber": "27",
+        "addr:street": "Little Collins Street",
+        "brand": "Sheraton",
+        "brand:wikidata": "Q634831",
+        "brand:wikipedia": "en:Sheraton Hotels and Resorts",
+        "name": "Sheraton Melbourne Hotel",
+        "phone": "+61 3 9290 1000",
+        "tourism": "hotel",
+        "website": "http://www.sheratonmelbourne.com"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9726307,
+          -37.8127011
+        ]
+      },
+      "id": "node/706906596"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/726966333",
+        "name": "Oaks On Lonsdale",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.971353,
+          -37.809801
+        ]
+      },
+      "id": "node/726966333"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/726966501",
+        "addr:housenumber": "43",
+        "addr:street": "Lonsdale Street",
+        "name": "Quest On Lonsdale",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.970954,
+          -37.809954
+        ]
+      },
+      "id": "node/726966501"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/768256980",
+        "artist_name": "Peter Cripps",
+        "artwork_type": "sculpture",
+        "name": "Public Project",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9667977,
+          -37.8263618
+        ]
+      },
+      "id": "node/768256980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/773059233",
+        "addr:housenumber": "108",
+        "addr:street": "Bourke Street",
+        "name": "The Paramount Serviced Apartments Melbourne",
+        "phone": "+61 3 9251 5555",
+        "tourism": "hotel",
+        "website": "http://www.theparamount.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.969767,
+          -37.81181
+        ]
+      },
+      "id": "node/773059233"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/799099786",
+        "addr:housenumber": "131-135",
+        "addr:street": "Bourke Street",
+        "building": "retail",
+        "name": "Citadines Melbourne on Bourke",
+        "opening_hours": "24/7",
+        "phone": "+61 3 9039 8888",
+        "tourism": "hotel",
+        "website": "http://www.citadines.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9693633,
+          -37.8127599
+        ]
+      },
+      "id": "node/799099786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836036540",
+        "addr:housenumber": "186",
+        "addr:street": "Exhibition Street",
+        "building": "retail",
+        "internet_access": "wlan",
+        "internet_access:ssid": "Rydges-Guest",
+        "name": "Rydges Melbourne",
+        "phone": "+61 3 9662 0511",
+        "tourism": "hotel",
+        "website": "https://www.rydges.com/hotel/RVMELB/Rydges-Melbourne.htm",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9706806,
+          -37.811201
+        ]
+      },
+      "id": "node/836036540"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/836036541",
+        "addr:housenumber": "51",
+        "addr:street": "Little Bourke Street",
+        "brand": "Mercure",
+        "brand:wikidata": "Q1709809",
+        "brand:wikipedia": "en:Mercure (hotel)",
+        "building": "retail",
+        "name": "Crossley Hotel",
+        "operator": "Mercure",
+        "phone": "+61 3 9639 1639",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.971142,
+          -37.8110357
+        ]
+      },
+      "id": "node/836036541"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/844369565",
+        "addr:housenumber": "131",
+        "addr:street": "Lonsdale Street",
+        "building": "retail",
+        "name": "Hotel Grand Chancellor Melbourne",
+        "tourism": "hotel",
+        "website": "https://www.grandchancellorhotels.com/melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9684209,
+          -37.8107252
+        ]
+      },
+      "id": "node/844369565"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/844369567",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "222",
+        "addr:postcode": "3000",
+        "addr:street": "Russell Street",
+        "alt_name": "Mantra",
+        "building": "retail",
+        "check_date": "2023-02-03",
+        "name": "Mantra on Russell",
+        "tourism": "hotel",
+        "website": "https://www.mantra.com.au/Russell"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9678576,
+          -37.8113058
+        ]
+      },
+      "id": "node/844369567"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/990015902",
+        "brand": "Travelodge",
+        "brand:wikidata": "Q24997583",
+        "name": "Travelodge",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9505329,
+          -37.8190002
+        ]
+      },
+      "id": "node/990015902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1040561859",
+        "name": "Disharmony",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.969918,
+          -37.823958
+        ]
+      },
+      "id": "node/1040561859"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1282403387",
+        "information": "map",
+        "map_size": "city",
+        "map_type": "street",
+        "tourism": "information",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9599947,
+          -37.8131232
+        ]
+      },
+      "id": "node/1282403387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/1862871256",
+        "addr:housenumber": "167",
+        "addr:street": "Franklin Street",
+        "name": "Hotel Discovery",
+        "tourism": "hostel",
+        "website": "http://www.hoteldiscovery.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9591089,
+          -37.8088493
+        ]
+      },
+      "id": "node/1862871256"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2093038225",
+        "name": "Burnley Tunnel Ventilation Stack/The Red Monolith",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9676338,
+          -37.8263503
+        ]
+      },
+      "id": "node/2093038225"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2104821469",
+        "information": "office",
+        "level": "0",
+        "name": "Metro Trains Info Central",
+        "operator": "Metro Trains",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.967139,
+          -37.818242
+        ]
+      },
+      "id": "node/2104821469"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2140980367",
+        "name": "Bev & Mick's Backpackers",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.956494,
+          -37.801364
+        ]
+      },
+      "id": "node/2140980367"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2162178792",
+        "artist_name": "Simon Perry",
+        "name": "The Public Purse",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9633926,
+          -37.8140998
+        ]
+      },
+      "id": "node/2162178792"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2183006552",
+        "amenity": "fountain",
+        "artist_name": "William Leslie Bowles",
+        "artwork_type": "statue",
+        "material": "bronze",
+        "name": "Diana and the Hounds",
+        "start_date": "1940",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9784998,
+          -37.8142973
+        ]
+      },
+      "id": "node/2183006552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2217869809",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "20",
+        "addr:postcode": "3000",
+        "addr:street": "Little Bourke Street",
+        "name": "City Limits Hotel Studio Apartments",
+        "toilets:wheelchair": "no",
+        "tourism": "hotel",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.971818,
+          -37.810474
+        ]
+      },
+      "id": "node/2217869809"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2274615442",
+        "name": "Island Wave",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9578455,
+          -37.8092264
+        ]
+      },
+      "id": "node/2274615442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2318297625",
+        "artist_name": "Susan Hewitt;Penelope Lee",
+        "artwork_type": "sculpture",
+        "description": "Large-scale sculpture unveiled in December 2008 to celebrate the 100th anniversary of women's right to vote in Victoria. The sculpture is a white scroll-like structure, which is twenty metres long and imposing on the small reserve.",
+        "name": "Great Petition",
+        "source:description": "monumentaustralia.org.au/display/98923-great-petition",
+        "start_date": "2008-12",
+        "tourism": "artwork",
+        "website": "https://www.monumentaustralia.org.au/display/98923-great-petition",
+        "wikidata": "Q23073295"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.975175,
+          -37.811497
+        ]
+      },
+      "id": "node/2318297625"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2384426956",
+        "attraction": "clock",
+        "description": "Large clock inside mall in the shape of a traditional fob watch. Puts on a musical show every hour.",
+        "fee": "no",
+        "name": "The Big Clock",
+        "public_access": "exterior",
+        "tourism": "attraction",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9630965,
+          -37.8103352
+        ]
+      },
+      "id": "node/2384426956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2398920934",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.960395,
+          -37.8138433
+        ]
+      },
+      "id": "node/2398920934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2421609590",
+        "artist_name": "Simon Rigg",
+        "artwork_type": "sculpture",
+        "name": "Guardians",
+        "tourism": "artwork",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9603812,
+          -37.8215881
+        ]
+      },
+      "id": "node/2421609590"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2421613409",
+        "name": "Evan Walker Bridge Lookout",
+        "tourism": "viewpoint",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9652371,
+          -37.819463
+        ]
+      },
+      "id": "node/2421613409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2503401611",
+        "addr:housenumber": "80",
+        "addr:street": "Victoria Parade",
+        "internet_access": "wlan",
+        "name": "Home @ The Mansion",
+        "phone": "+61 3 9663 4212",
+        "tourism": "hostel",
+        "website": "http://www.homemansion.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.974301,
+          -37.808446
+        ]
+      },
+      "id": "node/2503401611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2692539014",
+        "artist_name": "Louis Laumen (sculptor);Ngarra Murray (etching artwork)",
+        "artwork_type": "sculpture",
+        "description": "Prominent campaigners for Indigenous rights and justice, and it is the first memorial sculpture in Melbourne dedicated to Aboriginal leaders.",
+        "historic": "memorial",
+        "memorial": "statue",
+        "name": "Pastor Sir Douglas and Lady Gladys Nicholls Memorial",
+        "source": "survey",
+        "source:description": "monumentaustralia.org.au/themes/people/indigenous/display/94800-pastor-sir-douglas-and-lady-gladys-nicholls-",
+        "start_date": "2007-12-09",
+        "subject:wikipedia": "en:Douglas Nicholls",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9737105,
+          -37.8099324
+        ]
+      },
+      "id": "node/2692539014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2692567224",
+        "information": "map",
+        "map_size": "city",
+        "map_type": "street",
+        "name": "Civic Guide",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9770453,
+          -37.8080715
+        ]
+      },
+      "id": "node/2692567224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2776602131",
+        "access": "yes",
+        "addr:housename": "Eureka Skydeck",
+        "description": "Viewing deck at 297 m on top of the Eureka Tower building.",
+        "fee": "yes",
+        "name": "Eureka Skydeck 88",
+        "opening_hours": "Mo-Su 10:00-22:00",
+        "phone": "+61 3 9693 8888",
+        "tourism": "attraction",
+        "website": "https://www.eurekaskydeck.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9645246,
+          -37.8216909
+        ]
+      },
+      "id": "node/2776602131"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/2960619133",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "137-139",
+        "addr:postcode": "3000",
+        "addr:street": "Flinders Lane",
+        "name": "Flinders Lane Gallery",
+        "phone": "+61 3 9654 3332",
+        "tourism": "gallery",
+        "website": "https://flg.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9700606,
+          -37.8156599
+        ]
+      },
+      "id": "node/2960619133"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3101319430",
+        "addr:housenumber": "154",
+        "addr:postcode": "3053",
+        "addr:state": "VIC",
+        "addr:street": "Victoria Street",
+        "addr:suburb": "Carlton",
+        "fee": "no",
+        "museum": "art",
+        "name": "RMIT Design Archives",
+        "opening_hours": "\"by appointment only\"",
+        "operator": "RMIT",
+        "tourism": "museum",
+        "website": "https://www.designcollection.rmit.edu.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9626758,
+          -37.8062922
+        ]
+      },
+      "id": "node/3101319430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3105262652",
+        "name": "Street Art",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9644789,
+          -37.8121549
+        ]
+      },
+      "id": "node/3105262652"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3105263070",
+        "artwork_type": "graffiti",
+        "name": "Hosier Lane",
+        "name:ko": "호시어레인",
+        "name:zh": "涂鸦街",
+        "tourism": "artwork",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.969093,
+          -37.816421
+        ]
+      },
+      "id": "node/3105263070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3105263071",
+        "artwork_type": "graffiti",
+        "name": "Street Art",
+        "name:zh": "涂鸦街",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.968863,
+          -37.81646
+        ]
+      },
+      "id": "node/3105263071"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3105263072",
+        "name": "Street Art",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9653985,
+          -37.8163733
+        ]
+      },
+      "id": "node/3105263072"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3132496574",
+        "name": "Gog And Magog",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.964262,
+          -37.8149396
+        ]
+      },
+      "id": "node/3132496574"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3259282305",
+        "information": "tactile_map",
+        "name": "Podium 4",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9503521,
+          -37.8182072
+        ]
+      },
+      "id": "node/3259282305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3260940563",
+        "information": "office",
+        "name": "Fitzroy Gardens Visitor Centre",
+        "opening_hours": "Mo-Su 09:00-17:00; PH off",
+        "phone": "+61 3 9658 9658",
+        "tourism": "information",
+        "website": "http://www.thatsmelbourne.com.au/visitors/services/FGVC/Pages/FitzroyGardensVisitorCentre.aspx",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9791807,
+          -37.8148415
+        ]
+      },
+      "id": "node/3260940563"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3334086096",
+        "artwork_type": "statue",
+        "name": "Matthew Flinders",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9674884,
+          -37.8169563
+        ]
+      },
+      "id": "node/3334086096"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3343005106",
+        "addr:housenumber": "488",
+        "addr:street": "Swanston Street",
+        "name": "Arrow on Swanston",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9633148,
+          -37.8055511
+        ]
+      },
+      "id": "node/3343005106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3369425102",
+        "name": "Nico's Friends Backpackers",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.955717,
+          -37.805599
+        ]
+      },
+      "id": "node/3369425102"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3413847322",
+        "name": "Arts Centre Spire",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683907,
+          -37.8209914
+        ]
+      },
+      "id": "node/3413847322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3442391201",
+        "information": "tactile_map",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.953903,
+          -37.812669
+        ]
+      },
+      "id": "node/3442391201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3557255800",
+        "direction": "250",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9680734,
+          -37.8192299
+        ]
+      },
+      "id": "node/3557255800"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3557255803",
+        "board_type": "public_transport",
+        "check_date": "2021-12-21",
+        "information": "board",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9685019,
+          -37.8201278
+        ]
+      },
+      "id": "node/3557255803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3808190239",
+        "addr:housenumber": "562",
+        "addr:street": "Flinders Street",
+        "name": "Melbourne Central YHA",
+        "phone": "+61 3 9621 2523",
+        "tourism": "hostel",
+        "website": "https://www.yha.com.au/hostels/vic/melbourne-hostels/melbourne-central-hostel/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9556598,
+          -37.8206547
+        ]
+      },
+      "id": "node/3808190239"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3861897057",
+        "name": "The Spencer Backpackers",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.949142,
+          -37.809605
+        ]
+      },
+      "id": "node/3861897057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3891323657",
+        "name": "Family of Man I",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.968605,
+          -37.820947
+        ]
+      },
+      "id": "node/3891323657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/3891324057",
+        "name": "Family of Man II",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.968557,
+          -37.820943
+        ]
+      },
+      "id": "node/3891324057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4091526789",
+        "addr:city": "Southbank",
+        "addr:housenumber": "63",
+        "addr:postcode": "3006",
+        "addr:street": "Whiteman Street",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Melbourne Short Stay Apartments",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.956901,
+          -37.825877
+        ]
+      },
+      "id": "node/4091526789"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4120677338",
+        "artwork_type": "statue",
+        "name": "Sir Redmond Barry",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9643931,
+          -37.8100338
+        ]
+      },
+      "id": "node/4120677338"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4267698390",
+        "addr:housenumber": "353",
+        "addr:street": "Queen Street",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "City Tempo Hotel",
+        "phone": "+61 3 8256 7555",
+        "smoking": "outside",
+        "stars": "4",
+        "tourism": "hotel",
+        "website": "https://citytempo.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.958275,
+          -37.8101504
+        ]
+      },
+      "id": "node/4267698390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4351781132",
+        "addr:housenumber": "1",
+        "addr:street": "Queen Street",
+        "name": "Vibe",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9620432,
+          -37.8187935
+        ]
+      },
+      "id": "node/4351781132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4405133314",
+        "alt_name": "Little Greece",
+        "name": "Greek Precinct",
+        "phone": "+61 3 9663 3194",
+        "tourism": "attraction",
+        "website": "http://www.greekprecinct.com.au/",
+        "wikidata": "Q5601869",
+        "wikipedia": "en:Greek Precinct, Melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9666272,
+          -37.8110329
+        ]
+      },
+      "id": "node/4405133314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4466085689",
+        "artwork_type": "sculpture",
+        "name": "The Genie",
+        "name:en": "The Genie",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9711971,
+          -37.8214875
+        ]
+      },
+      "id": "node/4466085689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4469457289",
+        "addr:housenumber": "129-131",
+        "addr:street": "Flinders Lane",
+        "attraction": "historic_building",
+        "building:levels": "3",
+        "description": "Oldest building of its type in the easern part of the city. 3 storey bluestone warehuse built for Levy and Robertson fancy goods importing business.",
+        "fee": "no",
+        "name": "Levy and Robinson's Warehouse",
+        "public_access": "exterior",
+        "start_date": "1857",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9706802,
+          -37.8154954
+        ]
+      },
+      "id": "node/4469457289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4469522889",
+        "addr:housenumber": "6",
+        "addr:street": "Cathedral Place",
+        "description": "HQ of National Trust of Australia (Victoria)",
+        "fixme": "not clear if tourism information is available to general public by physically visiting this location; if not please remove toursm tag",
+        "information": "office",
+        "name": "National Trust of Australia (Victoria)",
+        "opening_hours": "Mo-Fr 09:00-17:00",
+        "phone": "+61 3 9556 9840",
+        "tourism": "information",
+        "website": "http://www.nattrust.com.au",
+        "wikipedia": "en:National Trust of Australia (Victoria)"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9755787,
+          -37.811658
+        ]
+      },
+      "id": "node/4469522889"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4469522989",
+        "artwork_type": "statue",
+        "description": "George Higinbotham, 1826-1892, politician, Chief Justice of the Supreme Court of Victoria",
+        "material": "bronze",
+        "name": "Hon. George Higinbotham",
+        "start_date": "1937",
+        "tourism": "artwork",
+        "wikipedia": "en:George Higinbotham#Commemoration"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.974253,
+          -37.8128727
+        ]
+      },
+      "id": "node/4469522989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4511498369",
+        "addr:housenumber": "380",
+        "addr:street": "Russell Street",
+        "internet_access": "wlan",
+        "internet_access:fee": "yes",
+        "name": "Space Hotel",
+        "phone": "+61 3 9662 3888",
+        "stars": "3",
+        "tourism": "hotel",
+        "website": "https://www.spacehotel.com.au"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9660168,
+          -37.8076069
+        ]
+      },
+      "id": "node/4511498369"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4578372489",
+        "artist_name": "David Michael Bell",
+        "artwork_type": "sculpture",
+        "description": "Tram half in the ground",
+        "name": "Raising the Rattler Pole - The Last of the Connies",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9547052,
+          -37.8208889
+        ]
+      },
+      "id": "node/4578372489"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4654921716",
+        "addr:housenumber": "609",
+        "addr:postcode": "3053",
+        "addr:state": "VIC",
+        "addr:street": "Swanston Street",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Essence Hotel Carlton",
+        "operator": "Essence Hotels",
+        "rooms": "235",
+        "tourism": "hotel",
+        "website": "https://www.essencehotels.com.au/carlton/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9631106,
+          -37.8041473
+        ]
+      },
+      "id": "node/4654921716"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4675693394",
+        "name": "Europa Melbourne",
+        "name:en": "Europa Melbourne",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9593686,
+          -37.8114121
+        ]
+      },
+      "id": "node/4675693394"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4788735125",
+        "name": "China Town",
+        "name:en": "China Town",
+        "name:zh": "唐人街",
+        "official_name:zh": "墨爾本唐人街",
+        "tourism": "attraction",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9652101,
+          -37.8125245
+        ]
+      },
+      "id": "node/4788735125"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4935347723",
+        "addr:housenumber": "3",
+        "addr:street": "Southgate Avenue",
+        "attraction": "eating_places",
+        "description": "Riverside restarants, cafes, bars & boutique shopping (Source: website)",
+        "fee": "no",
+        "name": "Southgate Mall",
+        "opening_hours": "24/7",
+        "phone": "+61 3 9686 1000",
+        "public_access": "yes",
+        "tourism": "attraction",
+        "website": "https://www.southgatemelbourne.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.966393,
+          -37.8201768
+        ]
+      },
+      "id": "node/4935347723"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4936370201",
+        "addr:street": "Flinders Street",
+        "name": "Flinders Street Railway Station",
+        "opening_hours": "24/7",
+        "phone": "+61 3 9610 7476",
+        "tourism": "attraction",
+        "website": "https://www.ptv.vic.gov.au/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9664779,
+          -37.8184161
+        ]
+      },
+      "id": "node/4936370201"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4936370204",
+        "addr:city": "Melbourne",
+        "addr:postcode": "3000",
+        "addr:street": "Bourke Street Mall",
+        "attraction": "shopping",
+        "description": "Pedestrian & tram-only portion of Bourke Street with department stores, cinemas, theatres",
+        "name": "Bourke Street Mall",
+        "opening_hours": "Mo-Fr 09:00-20:00",
+        "tourism": "attraction",
+        "website": "http://www.bourkestreet.com.au",
+        "wheelchair": "yes",
+        "wikipedia": "en:Bourke Street, Melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9644426,
+          -37.8138383
+        ]
+      },
+      "id": "node/4936370204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4936374477",
+        "access": "yes",
+        "addr:postcode": "3000",
+        "addr:street": "Hosier Lane",
+        "attraction": "street_art",
+        "description": "Narrow alley completly covered in graffiti art",
+        "fee": "no",
+        "name": "Hosier Lane",
+        "opening_hours": "24/7",
+        "public_access": "full",
+        "tourism": "attraction",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9690782,
+          -37.8163287
+        ]
+      },
+      "id": "node/4936374477"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4951840277",
+        "artwork_type": "sculpture",
+        "description": "Originally constructed primarily from sandstone in the 1800s, this circular bronze sundial sits on a light cement-rendered sandstone plinth and bluestone hexagonal base (reconstructed in 1947). It is located directly opposite The Court Favorite, c1930.",
+        "name": "Sundial",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9549691,
+          -37.8103205
+        ]
+      },
+      "id": "node/4951840277"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4951840278",
+        "artist_name": "Paul Montford",
+        "artwork_type": "statue",
+        "name": "The Court Favourite",
+        "start_date": "1930",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9550263,
+          -37.8102845
+        ]
+      },
+      "id": "node/4951840278"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4957928425",
+        "addr:street": "King Street",
+        "name": "Sea Life Melbourne Aquarium",
+        "opening_hours": "Mo-Su 09:30-18:00",
+        "phone:AU": "1800 026 576",
+        "tourism": "aquarium",
+        "website": "https://www.melbourneaquarium.com.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9582574,
+          -37.8207354
+        ]
+      },
+      "id": "node/4957928425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4957928427",
+        "addr:housenumber": "16, 344",
+        "addr:street": "Swanston Street",
+        "name": "RMIT Gallery",
+        "opening_hours": "Mo-We, Fr 11:00-17:00; Th 11:00-19:00; Sa 12:00-17:00",
+        "phone": "+61 3 9925 1717",
+        "tourism": "attraction",
+        "website": "https://www.rmit.edu.au/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9639057,
+          -37.8090747
+        ]
+      },
+      "id": "node/4957928427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4958385721",
+        "name": "St. Jerome's Hotel",
+        "name:en": "St. Jerome's Hotel",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9639641,
+          -37.8107286
+        ]
+      },
+      "id": "node/4958385721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5094962821",
+        "name": "Citadines on Bourke",
+        "name:en": "Citadines on Bourke",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683746,
+          -37.8128944
+        ]
+      },
+      "id": "node/5094962821"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5133991721",
+        "artist_name": "Neil Dawson",
+        "artwork_type": "sculpture",
+        "location": "overhead",
+        "name": "Anchor",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9475259,
+          -37.8182482
+        ]
+      },
+      "id": "node/5133991721"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5177851337",
+        "addr:housenumber": "372-378",
+        "addr:street": "Little Bourke Street",
+        "contact:phone": "+61 3 9600 4000",
+        "name": "YTI Garden Hotel",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9614668,
+          -37.8135166
+        ]
+      },
+      "id": "node/5177851337"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5288512321",
+        "information": "yes",
+        "level": "0",
+        "name": "1/2 platform entry",
+        "opening_hours": "24/7",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9524926,
+          -37.8172948
+        ]
+      },
+      "id": "node/5288512321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5288512521",
+        "name": "3,4,5,6,7,8 platform access",
+        "opening_hours": "24/7",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9530247,
+          -37.8186444
+        ]
+      },
+      "id": "node/5288512521"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5288512522",
+        "level": "0",
+        "name": "City of Melbourne Tourist Info (trial)",
+        "opening_hours": "Mo-Su 08:00-18:00",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9526127,
+          -37.816306
+        ]
+      },
+      "id": "node/5288512522"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5305688021",
+        "name": "William Barak Bridge",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9778152,
+          -37.8184125
+        ]
+      },
+      "id": "node/5305688021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5430672221",
+        "addr:housenumber": "39",
+        "addr:street": "Elizabeth Street",
+        "name": "Flinders backpackers",
+        "tourism": "hostel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9643717,
+          -37.8173782
+        ]
+      },
+      "id": "node/5430672221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5479217021",
+        "name": "Skyline view",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9672843,
+          -37.819827
+        ]
+      },
+      "id": "node/5479217021"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5485479592",
+        "artist_name": "Ron Brooks",
+        "name": "The Bunyip",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9644745,
+          -37.8103714
+        ]
+      },
+      "id": "node/5485479592"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5636094221",
+        "addr:street": "Swanston Street",
+        "description": "Public plaza bordered by Melbourne Town Hall & St Paul’s Cathedral. Currently a big hole n the ground in preparation for the building of underground Town Hall Station",
+        "name": "Melbourne City Square",
+        "tourism": "attraction",
+        "wikipedia": "en:City Square, Melbourne"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.967009,
+          -37.8162817
+        ]
+      },
+      "id": "node/5636094221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5724989221",
+        "fee": "no",
+        "level": "1;2;3",
+        "name": "Koorie Heritage Trust",
+        "opening_hours": "Mo-Su 10:00-17:00; PH closed",
+        "phone": "+61 3 8662 6300",
+        "tourism": "museum",
+        "website": "https://kht.org.au/",
+        "wikidata": "Q53700558"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.969102,
+          -37.8181571
+        ]
+      },
+      "id": "node/5724989221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922126187",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9679614,
+          -37.8178852
+        ]
+      },
+      "id": "node/5922126187"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922126196",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9687615,
+          -37.8185151
+        ]
+      },
+      "id": "node/5922126196"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922126204",
+        "information": "map",
+        "name": "Birrarung Marr",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9710179,
+          -37.8184727
+        ]
+      },
+      "id": "node/5922126204"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922126205",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9718323,
+          -37.8183866
+        ]
+      },
+      "id": "node/5922126205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5922126222",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9701714,
+          -37.8185457
+        ]
+      },
+      "id": "node/5922126222"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5928461722",
+        "name": "Dr Sun Yat Sen",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9692963,
+          -37.8111263
+        ]
+      },
+      "id": "node/5928461722"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5928461724",
+        "name": "Punt Hill Apartment Hotel",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9690149,
+          -37.8110456
+        ]
+      },
+      "id": "node/5928461724"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5928461726",
+        "name": "Gate",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9693435,
+          -37.8112517
+        ]
+      },
+      "id": "node/5928461726"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5928461728",
+        "artwork_type": "architecture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9699209,
+          -37.8111581
+        ]
+      },
+      "id": "node/5928461728"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5938036766",
+        "check_date": "2023-04-25",
+        "information": "map",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9722223,
+          -37.8094899
+        ]
+      },
+      "id": "node/5938036766"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5982185675",
+        "name": "Elizabeth Hostel",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9604597,
+          -37.80757
+        ]
+      },
+      "id": "node/5982185675"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5988192263",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "495",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Collins Street",
+        "brand": "InterContinental",
+        "brand:wikidata": "Q1825730",
+        "brand:wikipedia": "en:InterContinental",
+        "name": "InterContinental",
+        "phone": "+61 3 8627 1400",
+        "tourism": "hotel",
+        "website": "https://www.melbourne.intercontinental.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9579495,
+          -37.8185522
+        ]
+      },
+      "id": "node/5988192263"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6089154671",
+        "name": "Fo Guang Yuan Art Gallery",
+        "tourism": "gallery"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9606466,
+          -37.8153368
+        ]
+      },
+      "id": "node/6089154671"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6145105448",
+        "email": "eddbut@melbourne.vic.gov.au",
+        "name": "Melbourne City Gallery",
+        "phone": "+61 3 9658 9658",
+        "tourism": "gallery",
+        "website": "https://www.melbourne.vic.gov.au/arts-and-culture/city-gallery/Pages/city-gallery.aspx",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9665885,
+          -37.8149247
+        ]
+      },
+      "id": "node/6145105448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6163160886",
+        "check_date": "2023-02-08",
+        "information": "map",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9613951,
+          -37.8101165
+        ]
+      },
+      "id": "node/6163160886"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6167413267",
+        "artist_name": "Alison Weaver and Paul Quinn",
+        "name": "Three Businessmen Who Brought Their Own Lunch",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9656134,
+          -37.813688
+        ]
+      },
+      "id": "node/6167413267"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6245731017",
+        "artwork_type": "statue",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9766304,
+          -37.8103944
+        ]
+      },
+      "id": "node/6245731017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6245731018",
+        "artwork_type": "statue",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9767842,
+          -37.8102789
+        ]
+      },
+      "id": "node/6245731018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6307711302",
+        "artist_name": "Percival Ball",
+        "artwork_type": "statue",
+        "name": "Frances Ormond Statue",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9648842,
+          -37.8091249
+        ]
+      },
+      "id": "node/6307711302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6324311309",
+        "information": "map",
+        "map_size": "parkville_campus,_UoM",
+        "map_type": "street",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9604641,
+          -37.8041019
+        ]
+      },
+      "id": "node/6324311309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6328397386",
+        "name": "AC/DC Lane",
+        "opening_hours": "24/7",
+        "reservation": "no",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9708637,
+          -37.8155155
+        ]
+      },
+      "id": "node/6328397386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6360234792",
+        "brand": "Oaks Hotels and Resorts",
+        "name": "Oaks on Williams",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9564666,
+          -37.8113776
+        ]
+      },
+      "id": "node/6360234792"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6362846387",
+        "name": "Centre Place",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9655146,
+          -37.8165838
+        ]
+      },
+      "id": "node/6362846387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6618029467",
+        "check_date": "2023-08-09",
+        "information": "map",
+        "map_type": "street",
+        "operator": "University of Melbourne",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9634789,
+          -37.8001204
+        ]
+      },
+      "id": "node/6618029467"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6682182689",
+        "information": "map",
+        "map_type": "yes",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9501272,
+          -37.820133
+        ]
+      },
+      "id": "node/6682182689"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6725404938",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:suburb": "Melbourne",
+        "name": "Russell's Old Corner Shop",
+        "start_date": "1851",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.954225,
+          -37.8125507
+        ]
+      },
+      "id": "node/6725404938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658214",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9687194,
+          -37.8185511
+        ]
+      },
+      "id": "node/6741658214"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658215",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.971083,
+          -37.8185933
+        ]
+      },
+      "id": "node/6741658215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658218",
+        "name": "Birrarung Wilam (Common Ground)",
+        "start_date": "2006",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9718154,
+          -37.8185927
+        ]
+      },
+      "id": "node/6741658218"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658221",
+        "board_type": "geology",
+        "check_date": "2023-11-04",
+        "information": "board",
+        "name": "Why is The Yarra Muddy",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9722954,
+          -37.8186897
+        ]
+      },
+      "id": "node/6741658221"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658224",
+        "artist_name": "Deborah Halpern",
+        "artwork_type": "sculpture",
+        "name": "Angel",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9729364,
+          -37.8189411
+        ]
+      },
+      "id": "node/6741658224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658236",
+        "check_date": "2023-11-04",
+        "information": "map",
+        "name": "Birrarung Marr",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9760622,
+          -37.8212039
+        ]
+      },
+      "id": "node/6741658236"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6741658237",
+        "information": "board",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9740847,
+          -37.8187865
+        ]
+      },
+      "id": "node/6741658237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6761086846",
+        "information": "board",
+        "name": "Treasury Gardens Landsdowne Street",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9775647,
+          -37.8132492
+        ]
+      },
+      "id": "node/6761086846"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6761103618",
+        "information": "guidepost",
+        "name": "Government of Victoria",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9746319,
+          -37.8122462
+        ]
+      },
+      "id": "node/6761103618"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6761103621",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9747903,
+          -37.8119411
+        ]
+      },
+      "id": "node/6761103621"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6763450639",
+        "information": "guidepost",
+        "name": "Treasury Gardens corner Spring Street and Wellington Parade",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9751873,
+          -37.8149706
+        ]
+      },
+      "id": "node/6763450639"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6763450678",
+        "information": "guidepost",
+        "name": "Treasury Gardens Treasury Place",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9751859,
+          -37.8136015
+        ]
+      },
+      "id": "node/6763450678"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6763458488",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9745989,
+          -37.8142307
+        ]
+      },
+      "id": "node/6763458488"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6763458505",
+        "artwork_type": "statue",
+        "name": "Hamer",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9749285,
+          -37.8134171
+        ]
+      },
+      "id": "node/6763458505"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6763458529",
+        "information": "guidepost",
+        "name": "Treasury Gardens corner Wellington Parade and Landsdowne Street",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9772153,
+          -37.815314
+        ]
+      },
+      "id": "node/6763458529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6778625063",
+        "artwork_type": "statue",
+        "name": "Joan of Arc",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9646202,
+          -37.810125
+        ]
+      },
+      "id": "node/6778625063"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6810273060",
+        "board_type": "history",
+        "information": "board",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9727369,
+          -37.81158
+        ]
+      },
+      "id": "node/6810273060"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6822003744",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9717249,
+          -37.8140688
+        ]
+      },
+      "id": "node/6822003744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6822003764",
+        "information": "guidepost",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9713148,
+          -37.8141907
+        ]
+      },
+      "id": "node/6822003764"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6868180662",
+        "board_type": "public_transport",
+        "information": "board",
+        "operator": "City of Melbourne",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9525838,
+          -37.819633
+        ]
+      },
+      "id": "node/6868180662"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7217587435",
+        "artwork_type": "architecture",
+        "description": "A pavilion newly designed every year since 2014. Once the season is over, it is relocated to a permantent location.",
+        "name": "MPavillion",
+        "tourism": "artwork",
+        "website": "https://mpavilion.org/",
+        "wikidata": "Q48790584",
+        "wikipedia": "en:MPavilion"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9704857,
+          -37.8218246
+        ]
+      },
+      "id": "node/7217587435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7263858632",
+        "board_type": "history",
+        "description": "Plaque commemorating the site of the first Tanderrum, performed by the Kulin Nation, since colonialisation in 1835.",
+        "information": "board",
+        "level": "1",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9692371,
+          -37.8180124
+        ]
+      },
+      "id": "node/7263858632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7265713252",
+        "level": "0",
+        "name": "PTV Customer Service",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9670424,
+          -37.8178668
+        ]
+      },
+      "id": "node/7265713252"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7648218430",
+        "artist_name": "Chris Reynolds",
+        "artwork_type": "sculpture",
+        "material": "bronze",
+        "name": "A History Apparatus - Vessel Craft and Beacon",
+        "note": "1993",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9682108,
+          -37.8130458
+        ]
+      },
+      "id": "node/7648218430"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7867725262",
+        "addr:housenumber": "557",
+        "addr:street": "Swanston Street",
+        "guest_house": "student_accomodation",
+        "name": "Scape Carlton",
+        "phone": "+61 3 9977 8088",
+        "tourism": "hostel",
+        "website": "https://www.scape.com.au/melbourne/scape-carlton/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9628289,
+          -37.8051245
+        ]
+      },
+      "id": "node/7867725262"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7924641138",
+        "addr:housenumber": "222-260",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Elizabeth Street",
+        "addr:suburb": "Melbourne",
+        "check_date": "2024-09-14",
+        "name": "250E Apartments",
+        "tourism": "apartment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9627015,
+          -37.8126535
+        ]
+      },
+      "id": "node/7924641138"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7924641139",
+        "addr:housenumber": "222-260",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Elizabeth Street",
+        "addr:suburb": "Melbourne",
+        "check_date": "2024-09-14",
+        "name": "Somerset Serviced Apartments",
+        "tourism": "apartment"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9628689,
+          -37.8126416
+        ]
+      },
+      "id": "node/7924641139"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8189021210",
+        "artwork_type": "mural",
+        "name": "Legend of Fire",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9752863,
+          -37.8093796
+        ]
+      },
+      "id": "node/8189021210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8963599465",
+        "artist_name": "Clement Meadmore",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Dervish",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9671382,
+          -37.8198947
+        ]
+      },
+      "id": "node/8963599465"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8963689206",
+        "artist_name": "Bruce Armstrong",
+        "artwork_type": "sculpture",
+        "material": "stone",
+        "name": "Bunjil",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9522788,
+          -37.8207663
+        ]
+      },
+      "id": "node/8963689206"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8963689207",
+        "artist_name": "Dion Horstmans",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Supersonic",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9503449,
+          -37.8203729
+        ]
+      },
+      "id": "node/8963689207"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8963689210",
+        "artist_name": "Kate Daw and Stewart Russell",
+        "artwork_type": "sculpture",
+        "material": "brick",
+        "name": "Civil Twilight End",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9490049,
+          -37.8184876
+        ]
+      },
+      "id": "node/8963689210"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8963689211",
+        "artist_name": "Andrew Rogers",
+        "artwork_type": "sculpture",
+        "name": "Unfurling",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9488257,
+          -37.8186349
+        ]
+      },
+      "id": "node/8963689211"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8998978534",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9744908,
+          -37.8150253
+        ]
+      },
+      "id": "node/8998978534"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8999014958",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9605377,
+          -37.8203021
+        ]
+      },
+      "id": "node/8999014958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8999014959",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9606024,
+          -37.8202772
+        ]
+      },
+      "id": "node/8999014959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8999014960",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9607324,
+          -37.8202227
+        ]
+      },
+      "id": "node/8999014960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8999014961",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9607955,
+          -37.8201938
+        ]
+      },
+      "id": "node/8999014961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/8999014962",
+        "artist_name": "Geoffrey Barrtlett & Bruce Armstrong",
+        "artwork_type": "sculpture",
+        "name": "Constellation",
+        "start_date": "1996",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9606651,
+          -37.8202449
+        ]
+      },
+      "id": "node/8999014962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9106562132",
+        "artwork_type": "sculpture",
+        "name": "Colonial Square",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9730578,
+          -37.8046002
+        ]
+      },
+      "id": "node/9106562132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9141340831",
+        "artist_name": "Nadim Karam / Mandy Nicholson",
+        "artwork_type": "sculpture",
+        "material": "steel",
+        "name": "Gayip",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9618175,
+          -37.8210216
+        ]
+      },
+      "id": "node/9141340831"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9156860005",
+        "artist_name": "Simon Rigg",
+        "artwork_type": "sculpture",
+        "name": "Guardians",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9604649,
+          -37.8215461
+        ]
+      },
+      "id": "node/9156860005"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9161912879",
+        "artwork_type": "sculpture",
+        "name": "Once Upon A Slime",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9716402,
+          -37.8184153
+        ]
+      },
+      "id": "node/9161912879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9161912952",
+        "name": "Scar – A Stolen Vision",
+        "start_date": "2001",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9597107,
+          -37.8200838
+        ]
+      },
+      "id": "node/9161912952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9161912953",
+        "artist_name": "Ray Thomas",
+        "artwork_type": "mosaic",
+        "name": "Another View Site 8",
+        "start_date": "1994",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9602465,
+          -37.819387
+        ]
+      },
+      "id": "node/9161912953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9161912954",
+        "artist_name": "Helen Bodycomb",
+        "name": "World Within, World Without (Forgotten Australians)",
+        "start_date": "2010",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9630439,
+          -37.8206106
+        ]
+      },
+      "id": "node/9161912954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9162478298",
+        "name": "Anchor",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9542604,
+          -37.8241577
+        ]
+      },
+      "id": "node/9162478298"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9162478299",
+        "name": "Buoy",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9541903,
+          -37.8244534
+        ]
+      },
+      "id": "node/9162478299"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9162478300",
+        "name": "Buoy",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9541654,
+          -37.8244753
+        ]
+      },
+      "id": "node/9162478300"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9162478301",
+        "name": "Anchor",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9538001,
+          -37.8244388
+        ]
+      },
+      "id": "node/9162478301"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9162478302",
+        "name": "Anchor",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9539336,
+          -37.8245106
+        ]
+      },
+      "id": "node/9162478302"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9294848074",
+        "addr:housenumber": "408",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Flinders Lane",
+        "addr:suburb": "Melbourne",
+        "brand": "W Hotels",
+        "brand:wikidata": "Q7958488",
+        "brand:wikipedia": "en:W Hotels",
+        "name": "W Melbourne",
+        "rooms": "294",
+        "short_name": "W",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9602606,
+          -37.818194
+        ]
+      },
+      "id": "node/9294848074"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9294887249",
+        "addr:housenumber": "160",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Spencer Street",
+        "addr:suburb": "Melbourne",
+        "air_conditioning": "yes",
+        "brand": "Mövenpick",
+        "brand:wikidata": "Q691162",
+        "brand:wikipedia": "en:Mövenpick Hotels & Resorts",
+        "name": "Mövenpick Hotel Melbourne on Spencer",
+        "rooms": "172",
+        "tourism": "hotel",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9537168,
+          -37.8173086
+        ]
+      },
+      "id": "node/9294887249"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9298174575",
+        "direction": "75",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683996,
+          -37.8191578
+        ]
+      },
+      "id": "node/9298174575"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9298174576",
+        "artwork_type": "architecture",
+        "name": "Chinatown Entrance Arch",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9653949,
+          -37.8125015
+        ]
+      },
+      "id": "node/9298174576"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9298174584",
+        "artist_name": "Petrus Spronk",
+        "artwork_type": "sculpture",
+        "material": "bluestone",
+        "name": "Architectural Fragment",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9640357,
+          -37.8098281
+        ]
+      },
+      "id": "node/9298174584"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9307551784",
+        "artwork_type": "statue",
+        "name": "Dunstan",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9751557,
+          -37.8133516
+        ]
+      },
+      "id": "node/9307551784"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9307551785",
+        "artwork_type": "statue",
+        "name": "Cain",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9753171,
+          -37.8133041
+        ]
+      },
+      "id": "node/9307551785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9307551786",
+        "artwork_type": "statue",
+        "name": "Bolte",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9751685,
+          -37.8133478
+        ]
+      },
+      "id": "node/9307551786"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9858417037",
+        "access": "yes",
+        "level": "3",
+        "name": "La Trobe Reading Room",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9654221,
+          -37.8096934
+        ]
+      },
+      "id": "node/9858417037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9979326609",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9470762,
+          -37.8153197
+        ]
+      },
+      "id": "node/9979326609"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9979326610",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9467271,
+          -37.8154742
+        ]
+      },
+      "id": "node/9979326610"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9979326611",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9468299,
+          -37.8155226
+        ]
+      },
+      "id": "node/9979326611"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10048415132",
+        "fee": "no",
+        "level": "0",
+        "name": "The Art Of Dr Seuss",
+        "toilets": "no",
+        "tourism": "gallery",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9642829,
+          -37.8155998
+        ]
+      },
+      "id": "node/10048415132"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10250227844",
+        "artwork_type": "statue",
+        "name": "St George and the Dragon",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9644656,
+          -37.8098714
+        ]
+      },
+      "id": "node/10250227844"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10598310130",
+        "addr:city": "Melbourne",
+        "addr:housenumber": "388",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Lonsdale Street",
+        "name": "Brady Hotels",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9608545,
+          -37.812459
+        ]
+      },
+      "id": "node/10598310130"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10635926320",
+        "amenity": "clock",
+        "board_type": "public_transport",
+        "date": "no",
+        "departures_board": "realtime",
+        "display": "analog",
+        "information": "board",
+        "loc_name": "Under the Clocks",
+        "name": "Flinders Street Clocks",
+        "support": "wall",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.967182,
+          -37.8177588
+        ]
+      },
+      "id": "node/10635926320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10718583959",
+        "addr:postcode": "3006",
+        "addr:state": "VIC",
+        "addr:suburb": "Southbank",
+        "addr:unit": "The Hub",
+        "check_date": "2023-06-16",
+        "information": "office",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "internet_access:ssid": "Eduroam, Uniwireless",
+        "name": "Stop 1 at Southbank",
+        "operator": "University of Melbourne",
+        "source": "local knowledge",
+        "toilets": "yes",
+        "toilets:wheelchair": "yes",
+        "tourism": "information",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9691375,
+          -37.8244506
+        ]
+      },
+      "id": "node/10718583959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10744445805",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9674021,
+          -37.8172914
+        ]
+      },
+      "id": "node/10744445805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10744449805",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9690921,
+          -37.8163621
+        ]
+      },
+      "id": "node/10744449805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10744477605",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9660253,
+          -37.8148194
+        ]
+      },
+      "id": "node/10744477605"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10744533605",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9731972,
+          -37.8029464
+        ]
+      },
+      "id": "node/10744533605"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10846059887",
+        "layer": "2",
+        "level": "2",
+        "name": "Piano",
+        "tourism": "attraction"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9627978,
+          -37.8102781
+        ]
+      },
+      "id": "node/10846059887"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/10915213205",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683418,
+          -37.8107308
+        ]
+      },
+      "id": "node/10915213205"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11017168508",
+        "information": "visitor_centre",
+        "name": "Queen Victoria Market Visitor Hub",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9576513,
+          -37.8078466
+        ]
+      },
+      "id": "node/11017168508"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11052081657",
+        "information": "office",
+        "name": "Queen Victoria Market Information Office",
+        "operator": "Queen Victoria Market",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9577793,
+          -37.8073331
+        ]
+      },
+      "id": "node/11052081657"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11135649035",
+        "name": "Next",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9703005,
+          -37.8134152
+        ]
+      },
+      "id": "node/11135649035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11135649050",
+        "artwork_type": "sculpture",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9685197,
+          -37.8137066
+        ]
+      },
+      "id": "node/11135649050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11168844123",
+        "addr:postcode": "3008",
+        "addr:state": "VIC",
+        "addr:street": "Collins Street",
+        "addr:suburb": "Melbourne",
+        "height": "18",
+        "name": "Batman's Hill",
+        "tourism": "attraction",
+        "wikidata": "Q4869331",
+        "wikipedia": "en:Batman's Hill"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9539139,
+          -37.8193858
+        ]
+      },
+      "id": "node/11168844123"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11182252758",
+        "information": "map",
+        "tourism": "information"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9538725,
+          -37.8240469
+        ]
+      },
+      "id": "node/11182252758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11182318147",
+        "brand": "Oaks Hotels, Resorts & Suites",
+        "brand:wikidata": "Q23073772",
+        "name": "Oaks Hotels, Resorts & Suites",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9580055,
+          -37.8177557
+        ]
+      },
+      "id": "node/11182318147"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11369827381",
+        "artist_name": "Andrew Rogers",
+        "artwork_type": "statue",
+        "name": "Reaching Away",
+        "statue": "woman",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9779586,
+          -37.8170401
+        ]
+      },
+      "id": "node/11369827381"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11369827382",
+        "artwork_type": "statue",
+        "statue": "woman",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9778349,
+          -37.8176066
+        ]
+      },
+      "id": "node/11369827382"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11404814215",
+        "addr:housenumber": "167",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Franklin Street",
+        "addr:suburb": "Melbourne",
+        "air_conditioning": "yes",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "The Village Melbourne",
+        "phone": "+61 3 9329 7525",
+        "tourism": "hostel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9592533,
+          -37.8088821
+        ]
+      },
+      "id": "node/11404814215"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11411797866",
+        "name": "Unilodge Swanston",
+        "tourism": "hotel",
+        "website": "https://www.unilodge.com.au/student-accommodation-melbourne/339-swanston"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9637975,
+          -37.8103445
+        ]
+      },
+      "id": "node/11411797866"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11411909948",
+        "name": "Unilodge Melbourne Central",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9604223,
+          -37.8107755
+        ]
+      },
+      "id": "node/11411909948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11433400129",
+        "addr:housenumber": "90-130",
+        "addr:postcode": "3000",
+        "addr:state": "VIC",
+        "addr:street": "Swanston Street",
+        "addr:suburb": "Melbourne",
+        "information": "office",
+        "name": "Melbourne Visitor Hub",
+        "opening_hours": "Mo-Su 09:00-17:00",
+        "phone": "+61 3 9658 9658",
+        "tourism": "information",
+        "website": "https://whatson.melbourne.vic.gov.au/visitor-info/visitor-centres/melbourne-visitor-hub",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9664313,
+          -37.8146299
+        ]
+      },
+      "id": "node/11433400129"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11466834913",
+        "name": "Punthill Manhattan",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9725917,
+          -37.8149339
+        ]
+      },
+      "id": "node/11466834913"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11466834914",
+        "level": "-1",
+        "name": "Arc One",
+        "tourism": "gallery",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9730543,
+          -37.8148932
+        ]
+      },
+      "id": "node/11466834914"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11605798627",
+        "name": "Veriu",
+        "tourism": "hotel",
+        "wheelchair": "designated"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9588044,
+          -37.8075564
+        ]
+      },
+      "id": "node/11605798627"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11609900922",
+        "artist_name": "Akio Makigawa",
+        "artwork_type": "sculpture",
+        "name": "Garden of Unity",
+        "tourism": "artwork",
+        "year_of_construction": "2001"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9703277,
+          -37.8040052
+        ]
+      },
+      "id": "node/11609900922"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11610094118",
+        "name": "Dome Promenade",
+        "tourism": "viewpoint"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9714706,
+          -37.8048614
+        ]
+      },
+      "id": "node/11610094118"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11702730224",
+        "addr:housenumber": "114",
+        "addr:postcode": "3053",
+        "addr:state": "VIC",
+        "addr:street": "Grattan Street",
+        "addr:suburb": "Carlton",
+        "check_date": "2024-03-08",
+        "contact:facebook": "https://www.facebook.com/scigallerymel/",
+        "description": "Exploring the collision of art & science, & playing a vital role in shifting our understanding of science, art & innovation, Science Gallery Melbourne is part of the acclaimed Global Science Gallery Network pioneered by Trinity College Dublin.",
+        "internet_access": "yes",
+        "level": "0",
+        "name": "Science Gallery",
+        "note": "Added by Jon Peacock, 8 March 2024",
+        "opening_hours": "We-Sa 11:00-17:00",
+        "operator": "University of Melbourne",
+        "source": "local knowledge",
+        "toilets": "yes",
+        "toilets:wheelchair": "yes",
+        "tourism": "gallery",
+        "website": "https://melbourne.sciencegallery.com/",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9645387,
+          -37.8003098
+        ]
+      },
+      "id": "node/11702730224"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11743224075",
+        "artist_name": "Paul Montford",
+        "artwork_type": "statue",
+        "material": "bronze",
+        "name": "John Wesley's Statue",
+        "tourism": "artwork",
+        "wikidata": "Q124984403"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9683193,
+          -37.8102815
+        ]
+      },
+      "id": "node/11743224075"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11747692470",
+        "addr:housenumber": "140",
+        "addr:postcode": "3000",
+        "addr:street": "King Street",
+        "name": "Meriton Suites Melbourne",
+        "tourism": "hotel"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9561904,
+          -37.816883
+        ]
+      },
+      "id": "node/11747692470"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11765725899",
+        "artist_name": "Ario Mountford",
+        "artwork_type": "installation",
+        "name": "Revolutions",
+        "operator": "Melbourne City Council",
+        "tourism": "artwork"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9665167,
+          -37.8252869
+        ]
+      },
+      "id": "node/11765725899"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11818256998",
+        "elevator": "no",
+        "name": "Hotel No",
+        "rooms": "6",
+        "tourism": "hotel",
+        "wheelchair": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9610774,
+          -37.8180457
+        ]
+      },
+      "id": "node/11818256998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11823141199",
+        "name": "Disko Duk Duk",
+        "tourism": "attraction",
+        "website": "https://www.gurududu.org/gigs/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9692984,
+          -37.8177817
+        ]
+      },
+      "id": "node/11823141199"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12175749076",
+        "level": "-1",
+        "name": "Monopoly Dreams",
+        "tourism": "attraction",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.963363,
+          -37.8115609
+        ]
+      },
+      "id": "node/12175749076"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12175779435",
+        "information": "office",
+        "level": "-1",
+        "name": "Melbourne Central Station Customer Service",
+        "tourism": "information",
+        "wheelchair": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.9628514,
+          -37.8101382
+        ]
+      },
+      "id": "node/12175779435"
+    }
+  ]
+}

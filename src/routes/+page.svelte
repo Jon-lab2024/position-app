@@ -25,6 +25,7 @@
     let bounds = getMapBounds(markers);
     let showGeoJSON = false;
     let geojsonData;
+    let poiData; // Variable to store the POI data
 
     const options = { enableHighAccuracy: true, timeout: Infinity, maximumAge: 0 };
     let getPosition = false;
@@ -79,7 +80,7 @@
         showModal = false;
         selectedPlace = null;
     }
-    
+
     function deleteMarker(index) {
         markers = markers.filter((_, i) => i !== index);
     }
@@ -134,6 +135,16 @@
     onMount(async () => {
         const response = await fetch('melbourne.geojson');
         geojsonData = await response.json();
+        const poiResponse = await fetch('/tourism.geojson');
+        poiData = await poiResponse.json();
+        
+        // Filter POI data to include only tourism-related places
+        poiData.features = poiData.features.filter(feature => {
+            const tags = feature.properties;
+            return (tags.tourism && tags.tourism === 'gallery') ||
+                   (tags.tourism && tags.tourism === 'artwork') ||
+                   (tags.tourism && tags.tourism === 'attraction');
+        });
 
         getUserLocationWithGNSSStatus()
             .then(({ coords, isGNSS: gnssStatus, message }) => {
@@ -165,6 +176,7 @@
 </div>
 {/if}
 
+<!-- Main content layout and map rendering -->
 <div class="flex flex-col h-[calc(100vh-80px)] w-full">
     <div class="grid grid-cols-4">
         <!-- Geolocation Controls -->
@@ -259,14 +271,39 @@
                         {/if}
                     </span>
                     <Popup openOn="hover" offset={[0, -10]}>
-                        <div class="text-lg font-bold">{marker.name || `New Place ${i + 1}`}</div>
+                        <div class="text-lg font-bold">
+                            {#if i < 9}
+                                {marker.name || `New Place ${i + 1}`}
+                            {/if}
+                        </div>
                     </Popup>
                 </Marker>
             </div>
         {/each}
 
+        <!-- Display POI data -->
+        {#if poiData}
+            <GeoJSON id="poiData" data={poiData}>
+                {#each poiData.features as feature (feature.id)}
+                    <DefaultMarker lngLat={feature.geometry.coordinates}>
+                        <Popup offset={[0, -10]}>
+                            <div>
+                                <strong>{feature.properties.name || 'Unnamed POI'}</strong>
+                                <p>{feature.properties.tourism || 'Tourism'}</p>
+                            </div>
+                        </Popup>
+                    </DefaultMarker>
+                {/each}
+            </GeoJSON>
+        {/if}
+
         {#if watchedMarker.lngLat}
             <DefaultMarker lngLat={watchedMarker.lngLat}>
+                <div
+                    class="custom-marker"
+                    style="background-color: red; border-radius: 50%; width: 20px; height: 20px; position: relative; transform: translate(-50%, -50%);"
+                >
+                </div>
                 <Popup offset={[0, -10]}>
                     <div class="text-lg font-bold">{isGNSS ? 'You' : 'No GNSS'}</div>
                 </Popup>
