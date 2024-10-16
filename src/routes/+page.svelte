@@ -6,9 +6,9 @@
         FillLayer, GeoJSON, hoverStateFilter, LineLayer,
         MapEvents, MapLibre, Marker, Popup,
     } from 'svelte-maplibre';
-
     import { getDistance, getMapBounds } from '$lib';
     import { getUserLocationWithGNSSStatus } from '$lib/utils';
+    import { fade } from 'svelte/transition';
 
     // Predefined markers with names and images
     let markers = [
@@ -43,8 +43,23 @@
     let selectedPlace = null;
     let mapLoaded = false;
 
+    // Helper function to get the next available marker number
+    function getNextMarkerNumber() {
+        let maxNumber = 0;
+        markers.forEach(marker => {
+            const match = marker.label.match(/Marker (\d+)/);
+            if (match) {
+                const number = parseInt(match[1], 10);
+                if (number > maxNumber) {
+                    maxNumber = number;
+                }
+            }
+        });
+        return maxNumber + 1;
+    }
+
     function addMarkerWithNextName(e) {
-        const newMarkerNumber = markers.length + 1;
+        const newMarkerNumber = getNextMarkerNumber();
         const newMarker = {
             lngLat: e.detail.lngLat,
             label: `Marker ${newMarkerNumber}`,
@@ -64,13 +79,17 @@
         showModal = false;
         selectedPlace = null;
     }
+    
+    function deleteMarker(index) {
+        markers = markers.filter((_, i) => i !== index);
+    }
 
     function checkProximity() {
         if (!watchedMarker.lngLat) return;
         markers.forEach(marker => {
             if (!marker.modalShown) {
                 const distance = getDistance([watchedMarker, marker]);
-                if (distance <= 50) {
+                if (distance <= 100) {
                     if (marker && marker.name && marker.image) {
                         selectedPlace = {
                             name: marker.name,
@@ -226,14 +245,24 @@
         {/if}
 
         {#each markers as marker, i (i)}
-            <Marker lngLat={marker.lngLat} class="grid h-8 w-24 place-items-center rounded-md border border-gray-200 bg-red-300 text-black shadow-2xl focus:outline-2 focus:outline-black">
-                <span class="text-lg">
-                    {marker.label || `Marker ${i + 1}`} {watchedMarker.lngLat ? `(${getDistance([watchedMarker, marker]).toFixed(0)}m)` : ''}
-                </span>
-                <Popup openOn="hover" offset={[0, -10]}>
-                    <div class="text-lg font-bold">{marker.name || `New Place ${i + 1}`}</div>
-                </Popup>
-            </Marker>
+            <div transition:fade={{ duration: 500 }}>
+                <Marker lngLat={marker.lngLat} class="grid h-8 w-28 place-items-center rounded-md border border-gray-200 bg-red-300 text-black shadow-2xl focus:outline-2 focus:outline-black">
+                    <span class="text-lg flex items-center justify-between w-full px-2">
+                        {marker.label || `Marker ${i + 1}`} {watchedMarker.lngLat ? `(${getDistance([watchedMarker, marker]).toFixed(0)}m)` : ''}
+                        {#if i >= 9}
+                            <button on:click|stopPropagation={() => deleteMarker(i)} class="text-red-600 hover:text-red-800">
+                                <!-- SVG trash icon goes here -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M6 3a1 1 0 011-1h6a1 1 0 011 1v1h5a1 1 0 110 2H4a1 1 0 110-2h5V3zM5 6h10l-1 12a1 1 0 01-1 1H7a1 1 0 01-1-1L5 6zm3 2a1 1 0 00-2 0v8a1 1 0 002 0V8zm4 0a1 1 0 00-2 0v8a1 1 0 002 0V8z" clip-rule="evenodd" />
+                                </svg>
+                            </button>
+                        {/if}
+                    </span>
+                    <Popup openOn="hover" offset={[0, -10]}>
+                        <div class="text-lg font-bold">{marker.name || `New Place ${i + 1}`}</div>
+                    </Popup>
+                </Marker>
+            </div>
         {/each}
 
         {#if watchedMarker.lngLat}
