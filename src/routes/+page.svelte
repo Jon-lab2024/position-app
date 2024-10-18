@@ -57,6 +57,10 @@
     // Add these new variables
     let walkingRouteGeojson = null;
     let walkingRouteDistance = 0;
+    let gameActive = false;
+    let score = 0;
+    let visitedPOIs = new Set();
+    let visitedMarkers = new Set();
 
     // Helper function to get the next available marker number
     function getNextMarkerNumber() {
@@ -117,6 +121,13 @@
                         };
                         showModal = true;
                         marker.modalShown = true;
+
+                        // Add scoring for pre-defined markers
+                        if (gameActive && distance <= 50 && !visitedMarkers.has(marker.label)) {
+                            score += 100;
+                            visitedMarkers.add(marker.label);
+                            console.log(`Visited marker: ${marker.name}, New score: ${score}`);
+                        }
                     } else {
                         console.log('No valid data for this marker:', marker);
                         return; // Do nothing if marker data is invalid
@@ -125,6 +136,36 @@
             }
         });
     }
+
+    function startGame() {
+        gameActive = true;
+        score = 0;
+        visitedPOIs.clear();
+        visitedMarkers.clear();
+    }
+
+    function endGame() {
+        gameActive = false;
+    }
+
+    function checkProximityToPOIs() {
+        if (!gameActive || !watchedMarker.lngLat) return;
+        
+        poiData.features.forEach(poi => {
+            const poiCoords = poi.geometry.coordinates;
+            const distance = getDistance([
+                watchedMarker,
+                { lngLat: { lng: poiCoords[0], lat: poiCoords[1] } }
+            ]);
+            
+            if (distance <= 50 && !visitedPOIs.has(poi.id)) {
+                score += 10;
+                visitedPOIs.add(poi.id);
+                console.log(`Visited POI: ${poi.properties.name}, New score: ${score}`);
+            }
+        });
+    }
+    
 
     async function calculateWalkingRoute(start, end) {
         const url = `https://router.project-osrm.org/route/v1/walking/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
@@ -171,6 +212,18 @@
             },
         };
         checkProximity();
+    }
+
+    // Modify the existing watchedPosition reactive statement
+    $: if (watchedPosition.coords) {
+        watchedMarker = {
+            lngLat: {
+                lng: watchedPosition.coords.longitude,
+                lat: watchedPosition.coords.latitude,
+            },
+        };
+        checkProximity();
+        checkProximityToPOIs(); // Add this line
     }
 
     onMount(async () => {
@@ -257,6 +310,14 @@
         <div class="col-span-4 md:col-span-1 text-center">
             <h1 class="font-bold">Found {count} markers</h1>
             The count will go up by one each time you are within 50 meters of a new marker.
+        </div>
+
+        <!-- Add the new Score Game controls here -->
+        <div class="col-span-4 md:col-span-1 text-center">
+            <h1 class="font-bold">Score Game</h1>
+            <button class="btn btn-neutral" on:click={startGame} disabled={gameActive}>Start Game</button>
+            <button class="btn btn-neutral" on:click={endGame} disabled={!gameActive}>End Game</button>
+            <p class="text-lg font-bold mt-2">Score: {score}</p>
         </div>
     </div>
 
