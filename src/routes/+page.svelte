@@ -15,14 +15,14 @@
 
     // Predefined markers with names and images
     let markers = [
-        { lngLat: { lng: 144.96459814751478, lat: -37.80995056223396 }, label: 'Marker 1', name: 'State Library', image: 'images/State_Library.jpg', modalShown: false },
-        { lngLat: { lng: 144.96318039790924, lat: -37.808357984258315 }, label: 'Marker 2', name: 'RMIT', image: 'images/RMIT.jpg', modalShown: false },
-        { lngLat: { lng: 144.96917684226275, lat: -37.817900704255486 }, label: 'Marker 3', name: 'Federation Square', image: 'images/Federation_Square.jpg', modalShown: false },
-        { lngLat: { lng: 144.96704004380317, lat: -37.818197131671816 }, label: 'Marker 4', name: 'Flinders st station', image: 'images/FlindersSt_Station.jpg', modalShown: false },
-        { lngLat: { lng: 144.95251801634004, lat: -37.818339416930115 }, label: 'Marker 5', name: 'SouthernCross Station', image: 'images/SouthernCross_Station.jpg', modalShown: false },
-        { lngLat: { lng: 144.9567645161061, lat: -37.80713929364221 }, label: 'Marker 6', name: 'Queen Victoria Market', image: 'images/Queen_Victoria_Market.jpg', modalShown: false },
-        { lngLat: { lng: 144.95829663666132, lat: -37.81375690238818 }, label: 'Marker 7', name: 'Supreme Court', image: 'images/Supreme_Court.jpg', modalShown: false },
-        { lngLat: { lng: 144.96239751929886, lat: -37.82058741142394 }, label: 'Marker 8', name: 'Sandridge Bridge', image: 'images/Sandridge_Bridge.jpg', modalShown: false }
+        { lngLat: { lng: 144.96459814751478, lat: -37.80995056223396 }, label: 'Key POI1', name: 'State Library', image: 'images/State_Library.jpg', modalShown: false },
+        { lngLat: { lng: 144.96318039790924, lat: -37.808357984258315 }, label: 'Key POI2', name: 'RMIT', image: 'images/RMIT.jpg', modalShown: false },
+        { lngLat: { lng: 144.96917684226275, lat: -37.817900704255486 }, label: 'Key POI3', name: 'Federation Square', image: 'images/Federation_Square.jpg', modalShown: false },
+        { lngLat: { lng: 144.96704004380317, lat: -37.818197131671816 }, label: 'Key POI4', name: 'Flinders st station', image: 'images/FlindersSt_Station.jpg', modalShown: false },
+        { lngLat: { lng: 144.95251801634004, lat: -37.818339416930115 }, label: 'Key POI5', name: 'SouthernCross Station', image: 'images/SouthernCross_Station.jpg', modalShown: false },
+        { lngLat: { lng: 144.9567645161061, lat: -37.80713929364221 }, label: 'Key POI6', name: 'Queen Victoria Market', image: 'images/Queen_Victoria_Market.jpg', modalShown: false },
+        { lngLat: { lng: 144.95829663666132, lat: -37.81375690238818 }, label: 'Key POI7', name: 'Supreme Court', image: 'images/Supreme_Court.jpg', modalShown: false },
+        { lngLat: { lng: 144.96239751929886, lat: -37.82058741142394 }, label: 'Key POI8', name: 'Sandridge Bridge', image: 'images/Sandridge_Bridge.jpg', modalShown: false }
     ];
 
     // Add the poiColors constant here
@@ -306,18 +306,15 @@
             <button class="btn btn-neutral" on:click={() => { showGeoJSON = !showGeoJSON }}>Toggle</button>
         </div>
 
-        <!-- Marker Count -->
-        <div class="col-span-4 md:col-span-1 text-center">
-            <h1 class="font-bold">Found {count} markers</h1>
-            The count will go up by one each time you are within 50 meters of a new marker.
-        </div>
-
         <!-- Add the new Score Game controls here -->
         <div class="col-span-4 md:col-span-1 text-center">
             <h1 class="font-bold">Score Game</h1>
             <button class="btn btn-neutral" on:click={startGame} disabled={gameActive}>Start Game</button>
             <button class="btn btn-neutral" on:click={endGame} disabled={!gameActive}>End Game</button>
             <p class="text-lg font-bold mt-2">Score: {score}</p>
+            The score +10 will increase when approach near a POI.<br>
+            The score +100 will increase when approach near a Key POI <br>
+            with image Popup.<br>
         </div>
     </div>
 
@@ -461,7 +458,7 @@
     h1 {
         color: #ff3e00;
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 120%;
         font-weight: 200;
     }
 </style>
