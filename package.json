@@ -35,5 +35,9 @@
         "tailwindcss": "^3.4.11",
         "typescript": "^5.5.4",
         "vite": "^5.4.4"
+    },
+    "dependencies": {
+        "@turf/turf": "^7.1.0",
+        "maplibre-gl": "^4.7.1"
     }
 }

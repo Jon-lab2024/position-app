@@ -9,6 +9,9 @@
     import { getDistance, getMapBounds } from '$lib';
     import { getUserLocationWithGNSSStatus } from '$lib/utils';
     import { fade } from 'svelte/transition';
+    // Add these new imports
+    import { lineString as turfLineString } from '@turf/helpers';
+    import turfLength from '@turf/length';
 
     // Predefined markers with names and images
     let markers = [
@@ -21,6 +24,15 @@
         { lngLat: { lng: 144.95829663666132, lat: -37.81375690238818 }, label: 'Marker 7', name: 'Supreme Court', image: 'images/Supreme_Court.jpg', modalShown: false },
         { lngLat: { lng: 144.96239751929886, lat: -37.82058741142394 }, label: 'Marker 8', name: 'Sandridge Bridge', image: 'images/Sandridge_Bridge.jpg', modalShown: false }
     ];
+
+    // Add the poiColors constant here
+    const poiColors = {
+        gallery: 'bg-purple-500',
+        museum: 'bg-blue-500',
+        attraction: 'bg-yellow-500',
+        artwork: 'bg-green-500',
+        default: 'bg-gray-500' // Changed to gray for any unforeseen categories
+    };
 
     let bounds = getMapBounds(markers);
     let showGeoJSON = false;
@@ -39,10 +51,12 @@
     let count = 0;
     let locationMessage = "";
     let isGNSS = null;
-
     let showModal = false;
     let selectedPlace = null;
     let mapLoaded = false;
+    // Add these new variables
+    let walkingRouteGeojson = null;
+    let walkingRouteDistance = 0;
 
     // Helper function to get the next available marker number
     function getNextMarkerNumber() {
@@ -66,9 +80,14 @@
             label: `Marker ${newMarkerNumber}`,
             name: `New Place ${newMarkerNumber}`,
             modalShown: false
+            // Remove the image property if it's not being used
         };
         markers = [...markers, newMarker];
         console.log('New marker added:', newMarker);
+
+        if (watchedMarker.lngLat) {
+            calculateWalkingRoute(watchedMarker.lngLat, newMarker.lngLat);
+        }
     }
 
     function openModal(marker) {
@@ -107,6 +126,28 @@
         });
     }
 
+    async function calculateWalkingRoute(start, end) {
+        const url = `https://router.project-osrm.org/route/v1/walking/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
+
+        try {
+            const response = await fetch(url);
+            const data = await response.json();
+
+            if (data.code === 'Ok') {
+                walkingRouteGeojson = data.routes[0].geometry;
+                
+                // Calculate route distance in meters
+                const line = turfLineString(walkingRouteGeojson.coordinates);
+                walkingRouteDistance = turfLength(line, {units: 'meters'});
+
+                console.log('Walking route calculated:', walkingRouteGeojson);
+                console.log('Walking route distance:', walkingRouteDistance.toFixed(0), 'm');
+            }
+        } catch (error) {
+            console.error('Error calculating walking route:', error);
+        }
+    }
+
     $: if (success || error) {
         getPosition = false;
     }
@@ -137,6 +178,7 @@
         geojsonData = await response.json();
         const poiResponse = await fetch('tourism.geojson');
         poiData = await poiResponse.json();
+        console.log('POI Data loaded:', poiData.features.length, 'features');
         
         // Filter POI data to include only tourism-related places
         poiData.features = poiData.features.filter(feature => {
@@ -237,6 +279,31 @@
             </ControlGroup>
         </Control>
 
+        <!-- Add the legend here -->
+        <Control class="bg-white p-3 rounded shadow">
+            <div class="text-lg font-bold mb-2">POI Types:</div>
+            <div class="flex flex-col space-y-2">
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-purple-500 mr-3"></div><span class="text-lg">Gallery</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-blue-500 mr-3"></div><span class="text-lg">Museum</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-yellow-500 mr-3"></div><span class="text-lg">Attraction</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-green-500 mr-3"></div><span class="text-lg">Artwork</span></div>
+            </div>
+        </Control>
+
+        <!-- New Walking Distance legend -->
+        <Control class="bg-white p-3 rounded shadow mt-2">
+            <div class="text-lg font-bold mb-2">Walking Distance:</div>
+            {#if walkingRouteDistance > 0}
+                <div class="text-lg">
+                    {Math.round(walkingRouteDistance)} m
+                </div>
+            {:else}
+                <div class="text-lg italic">
+                    No route calculated
+                </div>
+            {/if}
+        </Control>
+
         <MapEvents on:click={addMarkerWithNextName} />
 
         {#if showGeoJSON}
@@ -264,20 +331,19 @@
                         {marker.label || `Marker ${i + 1}`} {watchedMarker.lngLat ? `(${getDistance([watchedMarker, marker]).toFixed(0)}m)` : ''}
                         {#if i >= 9}
                             <button on:click|stopPropagation={() => deleteMarker(i)} class="text-red-600 hover:text-red-800">
-                                <!-- SVG trash icon goes here -->
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                                     <path fill-rule="evenodd" d="M6 3a1 1 0 011-1h6a1 1 0 011 1v1h5a1 1 0 110 2H4a1 1 0 110-2h5V3zM5 6h10l-1 12a1 1 0 01-1 1H7a1 1 0 01-1-1L5 6zm3 2a1 1 0 00-2 0v8a1 1 0 002 0V8zm4 0a1 1 0 00-2 0v8a1 1 0 002 0V8z" clip-rule="evenodd" />
                                 </svg>
                             </button>
                         {/if}
                     </span>
-                    <Popup openOn="hover" offset={[0, -10]}>
-                        <div class="text-lg font-bold">
-                            {#if i < 9}
-                                {marker.name || `New Place ${i + 1}`}
-                            {/if}
-                        </div>
-                    </Popup>
+                    {#if marker.name}
+                        <Popup offset={[0, -10]}>
+                            <div class="text-lg font-bold">
+                                {marker.name}
+                            </div>
+                        </Popup>
+                    {/if}
                 </Marker>
             </div>
         {/each}
@@ -286,15 +352,31 @@
         {#if poiData}
             <GeoJSON id="poiData" data={poiData}>
                 {#each poiData.features as feature (feature.id)}
-                    <DefaultMarker lngLat={feature.geometry.coordinates}>
+                    <Marker lngLat={feature.geometry.coordinates} class="poi-marker">
+                        <div class={`w-4 h-4 rounded-full border-2 border-white ${poiColors[feature.properties.tourism] || poiColors.default}`}></div>
                         <Popup offset={[0, -10]}>
                             <div>
                                 <strong>{feature.properties.name || 'Unnamed POI'}</strong>
                                 <p>{feature.properties.tourism || 'Tourism'}</p>
                             </div>
                         </Popup>
-                    </DefaultMarker>
+                    </Marker>
                 {/each}
+            </GeoJSON>
+        {/if}
+
+        <!-- Add the new walking route GeoJSON here -->
+        {#if walkingRouteGeojson}
+            <GeoJSON data={walkingRouteGeojson}>
+                <LineLayer
+                    id="walking-route"
+                    layout={{ 'line-join': 'round', 'line-cap': 'round' }}
+                    paint={{ 
+                        'line-color': '#22c55e', // Green color for walking route
+                        'line-width': 4,
+                        'line-dasharray': [2, 2] // Creates a dashed line
+                    }}
+                />
             </GeoJSON>
         {/if}
 
@@ -311,6 +393,7 @@
             </DefaultMarker>
         {/if}
     </MapLibre>
+
 </div>
 
 <style>
