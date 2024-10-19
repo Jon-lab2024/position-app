@@ -61,6 +61,7 @@
     let score = 0;
     let visitedPOIs = new Set();
     let visitedMarkers = new Set();
+    let walkingRouteCoordinates = [];
 
     // Helper function to get the next available marker number
     function getNextMarkerNumber() {
@@ -111,9 +112,18 @@
     function checkProximity() {
         if (!watchedMarker.lngLat) return;
         markers.forEach(marker => {
-            if (!marker.modalShown) {
-                const distance = getDistance([watchedMarker, marker]);
-                if (distance <= 100) {
+            const distance = getDistance([watchedMarker, marker]);
+            
+            if (distance <= 100) {
+                // Scoring logic for pre-defined markers
+                if (gameActive && marker.name && marker.image && !visitedMarkers.has(marker.label)) {
+                    score += 100;
+                    visitedMarkers.add(marker.label);
+                    console.log(`Visited pre-defined marker: ${marker.name}, New score: ${score}`);
+                }
+                
+                // Modal display logic
+                if (!marker.modalShown) {
                     if (marker && marker.name && marker.image) {
                         selectedPlace = {
                             name: marker.name,
@@ -121,16 +131,8 @@
                         };
                         showModal = true;
                         marker.modalShown = true;
-
-                        // Add scoring for pre-defined markers
-                        if (gameActive && distance <= 50 && !visitedMarkers.has(marker.label)) {
-                            score += 100;
-                            visitedMarkers.add(marker.label);
-                            console.log(`Visited marker: ${marker.name}, New score: ${score}`);
-                        }
                     } else {
                         console.log('No valid data for this marker:', marker);
-                        return; // Do nothing if marker data is invalid
                     }
                 }
             }
@@ -142,10 +144,14 @@
         score = 0;
         visitedPOIs.clear();
         visitedMarkers.clear();
+        walkingRouteCoordinates = [];
+        walkingRouteGeojson = null;
+        walkingRouteDistance = 0;
     }
 
     function endGame() {
         gameActive = false;
+        console.log(`Total walking distance: ${walkingRouteDistance.toFixed(2)} meters`);
     }
 
     function checkProximityToPOIs() {
@@ -166,6 +172,22 @@
         });
     }
     
+    function updateWalkingRouteGeojson() {
+        walkingRouteGeojson = {
+            type: "Feature",
+            properties: {},
+            geometry: {
+                type: "LineString",
+                coordinates: walkingRouteCoordinates
+            }
+        };
+        
+        // Calculate route distance in meters
+        if (walkingRouteCoordinates.length > 1) {
+            const line = turfLineString(walkingRouteCoordinates);
+            walkingRouteDistance = turfLength(line, {units: 'meters'});
+        }
+    }
 
     async function calculateWalkingRoute(start, end) {
         const url = `https://router.project-osrm.org/route/v1/walking/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
@@ -205,25 +227,19 @@
     }
 
     $: if (watchedPosition.coords) {
-        watchedMarker = {
-            lngLat: {
-                lng: watchedPosition.coords.longitude,
-                lat: watchedPosition.coords.latitude,
-            },
+        const newPosition = {
+            lng: watchedPosition.coords.longitude,
+            lat: watchedPosition.coords.latitude,
         };
+        watchedMarker = { lngLat: newPosition };
+        
+        if (gameActive) {
+            walkingRouteCoordinates = [...walkingRouteCoordinates, [newPosition.lng, newPosition.lat]];
+            updateWalkingRouteGeojson();
+        }
+        
         checkProximity();
-    }
-
-    // Modify the existing watchedPosition reactive statement
-    $: if (watchedPosition.coords) {
-        watchedMarker = {
-            lngLat: {
-                lng: watchedPosition.coords.longitude,
-                lat: watchedPosition.coords.latitude,
-            },
-        };
-        checkProximity();
-        checkProximityToPOIs(); // Add this line
+        checkProximityToPOIs();
     }
 
     onMount(async () => {
