@@ -62,6 +62,8 @@
     let visitedPOIs = new Set();
     let visitedMarkers = new Set();
     let walkingRouteCoordinates = [];
+    let lastAddedPosition = null;
+    const MIN_DISTANCE_THRESHOLD = 5;
 
     // Helper function to get the next available marker number
     function getNextMarkerNumber() {
@@ -147,6 +149,14 @@
         walkingRouteCoordinates = [];
         walkingRouteGeojson = null;
         walkingRouteDistance = 0;
+        lastAddedPosition = null;
+    }
+    
+    function clearWalkingRoute() {
+        walkingRouteCoordinates = [];
+        walkingRouteGeojson = null;
+        walkingRouteDistance = 0;
+        lastAddedPosition = null;
     }
 
     function endGame() {
@@ -173,6 +183,8 @@
     }
     
     function updateWalkingRouteGeojson() {
+        if (walkingRouteCoordinates.length < 2) return;
+
         walkingRouteGeojson = {
             type: "Feature",
             properties: {},
@@ -183,11 +195,10 @@
         };
         
         // Calculate route distance in meters
-        if (walkingRouteCoordinates.length > 1) {
-            const line = turfLineString(walkingRouteCoordinates);
-            walkingRouteDistance = turfLength(line, {units: 'meters'});
-        }
+        const line = turfLineString(walkingRouteCoordinates);
+        walkingRouteDistance = turfLength(line, {units: 'meters'});
     }
+
 
     async function calculateWalkingRoute(start, end) {
         const url = `https://router.project-osrm.org/route/v1/walking/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
@@ -234,8 +245,17 @@
         watchedMarker = { lngLat: newPosition };
         
         if (gameActive) {
-            walkingRouteCoordinates = [...walkingRouteCoordinates, [newPosition.lng, newPosition.lat]];
-            updateWalkingRouteGeojson();
+            const newCoords = [newPosition.lng, newPosition.lat];
+            
+            // Check if this is the first point or if the distance from the last point is greater than the threshold
+            if (!lastAddedPosition || getDistance([
+                { lngLat: { lng: lastAddedPosition[0], lat: lastAddedPosition[1] } },
+                { lngLat: newPosition }
+            ]) > MIN_DISTANCE_THRESHOLD) {
+                walkingRouteCoordinates = [...walkingRouteCoordinates, newCoords];
+                lastAddedPosition = newCoords;
+                updateWalkingRouteGeojson();
+            }
         }
         
         checkProximity();
@@ -331,6 +351,10 @@
             <h2 class="font-bold text-[#1e6091] text-lg mb-2">Score Game</h2>
             <button class="btn bg-green-500 text-white hover:bg-green-600 w-full mb-2" on:click={startGame} disabled={gameActive}>Start Game</button>
             <button class="btn bg-red-500 text-white hover:bg-red-600 w-full mb-2" on:click={endGame} disabled={!gameActive}>End Game</button>
+            <!-- Add the new Clear Walking Route button here -->
+            <button class="btn bg-blue-500 text-white hover:bg-blue-600 w-full mb-2" on:click={clearWalkingRoute} disabled={!gameActive}>
+                Clear Walking Route
+            </button>
             <p class="text-xl font-bold mt-2 text-[#1e6091]">Score: {score}</p>
             <p class="text-sm text-gray-600">
                 +10 points for approaching a POI<br>
