@@ -194,7 +194,7 @@
             ]);
             
             if (distance <= 50 && !visitedPOIs.has(poi.id)) {
-                score += 10;
+                score += 50;
                 visitedPOIs.add(poi.id);
                 console.log(`Visited POI: ${poi.properties.name}, New score: ${score}`);
                 checkMedals();  // Add this line
@@ -375,11 +375,34 @@
                 Clear Walking Route
             </button>
             <p class="text-sm text-gray-600 mt-2">
-                +10 points for approaching a POI<br>
+                +50 points for approaching a POI<br>
                 +100 points for approaching a Key POI with IMAGE Popup.<br>
                 Earn a medal for every 100 points!
             </p>
         </div>      
+    </div>
+    <!-- Legends below the map -->
+    <div class="grid grid-cols-2 gap-4 p-4">
+        <!-- POI Types Legend -->
+        <div class="bg-white p-2 rounded-lg shadow text-xs">
+            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">POI Types:</h3>
+            <div class="flex flex-col space-y-1">
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#1e6091] mr-1"></div><span>Gallery</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f59e0b] mr-1"></div><span>Museum</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#10b981] mr-1"></div><span>Attraction</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#ef4444] mr-1"></div><span>Artwork</span></div>
+            </div>
+        </div>
+
+        <!-- Walking Distance legend -->
+        <div class="bg-white p-2 rounded-lg shadow text-xs">
+            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">Walking Distance:</h3>
+            {#if walkingRouteDistance > 0}
+                <div>{Math.round(walkingRouteDistance)} m</div>
+            {:else}
+                <div class="italic">No route calculated</div>
+            {/if}
+        </div>
     </div>
 
     <!-- Add the new score and medal bar HERE, just before the closing div tag -->
@@ -436,7 +459,7 @@
 
         {#each markers as marker, i (i)}
             <div transition:fade={{ duration: 500 }}>
-                <Marker lngLat={marker.lngLat} class="grid h-8 w-28 place-items-center rounded-md border border-gray-200 bg-red-300 text-black shadow-2xl focus:outline-2 focus:outline-black">
+                <Marker lngLat={marker.lngLat} class="grid h-8 w-30 place-items-center rounded-md border border-gray-200 bg-red-300 text-black shadow-2xl focus:outline-2 focus:outline-black">
                     <span class="text-lg flex items-center justify-between w-full px-2">
                         {marker.label || `Marker ${i + 1}`} {watchedMarker.lngLat ? `(${getDistance([watchedMarker, marker]).toFixed(0)}m)` : ''}
                         {#if i >= 9}
@@ -503,31 +526,6 @@
             </DefaultMarker>
         {/if}
     </MapLibre>
-
-    
-    <!-- Legends below the map -->
-    <div class="grid grid-cols-2 gap-4 p-4">
-        <!-- POI Types Legend -->
-        <div class="bg-white p-2 rounded-lg shadow text-xs">
-            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">POI Types:</h3>
-            <div class="flex flex-col space-y-1">
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#1e6091] mr-1"></div><span>Gallery</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f59e0b] mr-1"></div><span>Museum</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#10b981] mr-1"></div><span>Attraction</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#ef4444] mr-1"></div><span>Artwork</span></div>
-            </div>
-        </div>
-
-        <!-- Walking Distance legend -->
-        <div class="bg-white p-2 rounded-lg shadow text-xs">
-            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">Walking Distance:</h3>
-            {#if walkingRouteDistance > 0}
-                <div>{Math.round(walkingRouteDistance)} m</div>
-            {:else}
-                <div class="italic">No route calculated</div>
-            {/if}
-        </div>
-    </div>
 </div>
 
 <style>
