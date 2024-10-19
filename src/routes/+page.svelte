@@ -64,6 +64,22 @@
     let walkingRouteCoordinates = [];
     let lastAddedPosition = null;
     const MIN_DISTANCE_THRESHOLD = 5;
+    let medals = 0;
+    let lastMedalScore = 0;
+
+    function checkMedals() {
+        if (score >= 100 && score - lastMedalScore >= 100) {
+            medals++;
+            lastMedalScore = score;
+        }
+    }
+
+    $: {
+        if (score > 0) {
+            checkMedals();
+        }
+    }
+    
 
     // Helper function to get the next available marker number
     function getNextMarkerNumber() {
@@ -122,6 +138,7 @@
                     score += 100;
                     visitedMarkers.add(marker.label);
                     console.log(`Visited pre-defined marker: ${marker.name}, New score: ${score}`);
+                    checkMedals();  // Add this line
                 }
                 
                 // Modal display logic
@@ -144,6 +161,8 @@
     function startGame() {
         gameActive = true;
         score = 0;
+        medals = 0;
+        lastMedalScore = 0;
         visitedPOIs.clear();
         visitedMarkers.clear();
         walkingRouteCoordinates = [];
@@ -178,6 +197,7 @@
                 score += 10;
                 visitedPOIs.add(poi.id);
                 console.log(`Visited POI: ${poi.properties.name}, New score: ${score}`);
+                checkMedals();  // Add this line
             }
         });
     }
@@ -351,22 +371,32 @@
             <h2 class="font-bold text-[#1e6091] text-lg mb-2">Score Game</h2>
             <button class="btn bg-green-500 text-white hover:bg-green-600 w-full mb-2" on:click={startGame} disabled={gameActive}>Start Game</button>
             <button class="btn bg-red-500 text-white hover:bg-red-600 w-full mb-2" on:click={endGame} disabled={!gameActive}>End Game</button>
-            <!-- Add the new Clear Walking Route button here -->
             <button class="btn bg-blue-500 text-white hover:bg-blue-600 w-full mb-2" on:click={clearWalkingRoute} disabled={!gameActive}>
                 Clear Walking Route
             </button>
-            <p class="text-xl font-bold mt-2 text-[#1e6091]">Score: {score}</p>
-            <p class="text-sm text-gray-600">
+            <p class="text-sm text-gray-600 mt-2">
                 +10 points for approaching a POI<br>
-                +100 points for approaching a Key POI with image Popup.
+                +100 points for approaching a Key POI with IMAGE Popup.<br>
+                Earn a medal for every 100 points!
             </p>
+        </div>      
+    </div>
+
+    <!-- Add the new score and medal bar HERE, just before the closing div tag -->
+    <div class="bg-[#1e6091] text-white p-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">Score: {score}</div>
+        <div class="flex items-center">
+            <span class="text-xl font-bold mr-2">Medals:</span>
+            {#each Array(medals) as _, i}
+                <span class="text-3xl" title="Medal">🏅</span>
+            {/each}
         </div>
     </div>
 
     <!-- Map -->
     <MapLibre 
         center={[144.97, -37.81]} 
-        class="map flex-grow min-h-[500px]" 
+        class="map flex-grow min-h-[calc(100vh-280px)]" 
         standardControls
         style="https://tiles.basemaps.cartocdn.com/gl/voyager-gl-style/style.json" 
         bind:bounds 
@@ -473,6 +503,7 @@
             </DefaultMarker>
         {/if}
     </MapLibre>
+
     
     <!-- Legends below the map -->
     <div class="grid grid-cols-2 gap-4 p-4">
