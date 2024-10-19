@@ -9,7 +9,6 @@
     import { getDistance, getMapBounds } from '$lib';
     import { getUserLocationWithGNSSStatus } from '$lib/utils';
     import { fade } from 'svelte/transition';
-    // Add these new imports
     import { lineString as turfLineString } from '@turf/helpers';
     import turfLength from '@turf/length';
 
@@ -54,7 +53,6 @@
     let showModal = false;
     let selectedPlace = null;
     let mapLoaded = false;
-    // Add these new variables
     let walkingRouteGeojson = null;
     let walkingRouteDistance = 0;
     let gameActive = false;
@@ -66,11 +64,22 @@
     const MIN_DISTANCE_THRESHOLD = 5;
     let medals = 0;
     let lastMedalScore = 0;
+    let showMedal = false;    // New state for medal animation
+    let medalEarned = false;  // Track if a medal was earned
+
+    function showMedalAnimation() {
+        showMedal = true;
+        setTimeout(() => {
+            showMedal = false;
+        }, 2000);  // Hide the medal after 2 seconds
+    }
 
     function checkMedals() {
         if (score >= 100 && score - lastMedalScore >= 100) {
             medals++;
             lastMedalScore = score;
+            medalEarned = true;
+            showMedalAnimation();  // Trigger the medal animation here
         }
     }
 
@@ -406,15 +415,23 @@
     </div>
 
     <!-- Add the new score and medal bar HERE, just before the closing div tag -->
-    <div class="bg-[#1e6091] text-white p-4 flex justify-between items-center">
-        <div class="text-2xl font-bold">Score: {score}</div>
+    <div class="bg-[#1e6091] text-white p-2 flex justify-between items-center">
+        <div class="text-lg font-bold">Score: {score}</div>
         <div class="flex items-center">
-            <span class="text-xl font-bold mr-2">Medals:</span>
-            {#each Array(medals) as _, i}
-                <span class="text-3xl" title="Medal">🏅</span>
-            {/each}
+            <span class="text-lg font-bold mr-2">Medals:</span>
+            <div class="flex flex-wrap">
+                {#each Array(medals) as _, i}
+                    <span class="text-base" style="line-height: 1; margin-right: -0.05em;">🏅</span>
+                {/each}
+            </div>
         </div>
     </div>
+
+    {#if showMedal}
+    <div class="medal-animation fixed inset-x-0 bottom-0 flex items-center justify-center z-50">
+        <span class="text-7xl bounce animate-medal">🏅</span>
+    </div>
+    {/if}
 
     <!-- Map -->
     <MapLibre 
@@ -532,10 +549,51 @@
     :global(body) {
         background-color: #f3f4f6;
     }
+
     .btn {
         @apply font-bold py-2 px-4 rounded;
     }
+
     .btn:disabled {
         @apply opacity-50 cursor-not-allowed;
     }
+
+    /* Medal Scaling and Bounce Animation */
+    @keyframes scaleUp {
+        0% { transform: scale(0.5); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-30px); }
+        60% { transform: translateY(-15px); }
+    }
+
+    @keyframes changeColor {
+        0%, 100% { color: gold; }
+        50% { color: orange; }
+    }
+
+    /* New Spin Animation */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(720deg); } /* 2 full spins = 720deg */
+    }
+
+    /* Updated Medal Animation */
+    .medal-animation {
+        position: fixed;
+        bottom: 20%; /* Middle of the bottom half */
+        left: 50%;
+        transform: translateX(-50%);
+        animation: scaleUp 0.5s ease-out forwards, changeColor 2s infinite;
+    }
+
+    /* Bounce Twice first, then Spin */
+    .bounce {
+        animation: bounce 2s ease-in-out 2, spin 1s linear 2s forwards; /* Spin starts after 2 seconds */
+    }
 </style>
+
