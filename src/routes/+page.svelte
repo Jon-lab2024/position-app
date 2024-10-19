@@ -273,12 +273,16 @@
 {/if}
 
 <!-- Main content layout and map rendering -->
-<div class="flex flex-col h-[calc(100vh-80px)] w-full">
-    <div class="grid grid-cols-4">
+<div class="flex flex-col h-[calc(100vh-80px)] w-full bg-gray-100">
+    <div class="grid grid-cols-4 gap-4 p-4">
         <!-- Geolocation Controls -->
-        <div class="col-span-4 md:col-span-1 text-center">
-            <h1 class="font-bold">Click button to get a one-time current position and add it to the map</h1>
-            <button class="btn btn-neutral" on:click={() => { getPosition = true }}>Get geolocation</button>
+        <div class="col-span-4 md:col-span-1 text-center mt-4"> <!-- Added mt-4 for top margin -->
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">
+                Click button to get a one-time current position
+            </h2>
+            <button class="btn bg-[#1e6091] text-white hover:bg-[#2a7ab0] w-2/5 mb-2" on:click={() => { getPosition = true }}>
+                Get geolocation
+            </button>
             <Geolocation {getPosition} options={options} bind:position let:loading bind:success bind:error let:notSupported>
                 {#if notSupported}
                     Your browser does not support the Geolocation API.
@@ -288,33 +292,34 @@
                     {#if error}An error occurred. Error code {error.code}: {error.message}.{/if}
                 {/if}
             </Geolocation>
-            <p class="break-words text-left">Coordinates: {coords}</p>
-            <p class="break-words text-left">Position: {JSON.stringify(position)}</p>
+            <p class="text-sm break-words text-left">Coordinates: {coords}</p>
+            <p class="text-sm break-words text-left">Position: {JSON.stringify(position)}</p>
         </div>
 
         <!-- Watch Position Controls -->
-        <div class="col-span-4 md:col-span-1 text-center">
-            <h1 class="font-bold">Automatically updated position when moving</h1>
-            <button class="btn btn-neutral" on:click={() => { watchPosition = true }}>Start watching</button>
+        <div class="col-span-4 md:col-span-1 bg-white p-4 rounded-lg shadow">
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Watch Position</h2>
+            <button class="btn bg-[#1e6091] text-white hover:bg-[#2a7ab0] w-full mb-2" on:click={() => { watchPosition = true }}>Start watching</button>
             <Geolocation getPosition={watchPosition} options={options} watch={true} on:position={(e) => { watchedPosition = e.detail }} />
             <p class="break-words text-left">watchedPosition: {JSON.stringify(watchedPosition)}</p>
         </div>
 
         <!-- GeoJSON Toggle -->
-        <div class="col-span-4 md:col-span-1 text-center">
-            <h1 class="font-bold">Toggle Melbourne Suburbs</h1>
-            <button class="btn btn-neutral" on:click={() => { showGeoJSON = !showGeoJSON }}>Toggle</button>
+        <div class="col-span-4 md:col-span-1 bg-white p-4 rounded-lg shadow">
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Melbourne Suburbs</h2>
+            <button class="btn bg-[#1e6091] text-white hover:bg-[#2a7ab0] w-full" on:click={() => { showGeoJSON = !showGeoJSON }}>Toggle Suburbs</button>
         </div>
 
         <!-- Add the new Score Game controls here -->
-        <div class="col-span-4 md:col-span-1 text-center">
-            <h1 class="font-bold">Score Game</h1>
-            <button class="btn btn-neutral" on:click={startGame} disabled={gameActive}>Start Game</button>
-            <button class="btn btn-neutral" on:click={endGame} disabled={!gameActive}>End Game</button>
-            <p class="text-lg font-bold mt-2">Score: {score}</p>
-            The score +10 will increase when approach near a POI.<br>
-            The score +100 will increase when approach near a Key POI <br>
-            with image Popup.<br>
+        <div class="col-span-4 md:col-span-1 bg-white p-4 rounded-lg shadow">
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Score Game</h2>
+            <button class="btn bg-green-500 text-white hover:bg-green-600 w-full mb-2" on:click={startGame} disabled={gameActive}>Start Game</button>
+            <button class="btn bg-red-500 text-white hover:bg-red-600 w-full mb-2" on:click={endGame} disabled={!gameActive}>End Game</button>
+            <p class="text-xl font-bold mt-2 text-[#1e6091]">Score: {score}</p>
+            <p class="text-sm text-gray-600">
+                +10 points for approaching a POI<br>
+                +100 points for approaching a Key POI with image Popup.
+            </p>
         </div>
     </div>
 
@@ -337,30 +342,7 @@
             </ControlGroup>
         </Control>
 
-        <!-- Add the legend here -->
-        <Control class="bg-white p-3 rounded shadow">
-            <div class="text-lg font-bold mb-2">POI Types:</div>
-            <div class="flex flex-col space-y-2">
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-purple-500 mr-3"></div><span class="text-lg">Gallery</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-blue-500 mr-3"></div><span class="text-lg">Museum</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-yellow-500 mr-3"></div><span class="text-lg">Attraction</span></div>
-                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-green-500 mr-3"></div><span class="text-lg">Artwork</span></div>
-            </div>
-        </Control>
 
-        <!-- New Walking Distance legend -->
-        <Control class="bg-white p-3 rounded shadow mt-2">
-            <div class="text-lg font-bold mb-2">Walking Distance:</div>
-            {#if walkingRouteDistance > 0}
-                <div class="text-lg">
-                    {Math.round(walkingRouteDistance)} m
-                </div>
-            {:else}
-                <div class="text-lg italic">
-                    No route calculated
-                </div>
-            {/if}
-        </Control>
 
         <MapEvents on:click={addMarkerWithNextName} />
 
@@ -430,9 +412,9 @@
                     id="walking-route"
                     layout={{ 'line-join': 'round', 'line-cap': 'round' }}
                     paint={{ 
-                        'line-color': '#22c55e', // Green color for walking route
+                        'line-color': '#1e6091',
                         'line-width': 4,
-                        'line-dasharray': [2, 2] // Creates a dashed line
+                        'line-dasharray': [2, 2]
                     }}
                 />
             </GeoJSON>
@@ -451,14 +433,40 @@
             </DefaultMarker>
         {/if}
     </MapLibre>
+    
+    <!-- Legends below the map -->
+    <div class="grid grid-cols-2 gap-4 p-4">
+        <!-- POI Types Legend -->
+        <div class="bg-white p-2 rounded-lg shadow text-xs">
+            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">POI Types:</h3>
+            <div class="flex flex-col space-y-1">
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#1e6091] mr-1"></div><span>Gallery</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f59e0b] mr-1"></div><span>Museum</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#10b981] mr-1"></div><span>Attraction</span></div>
+                <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#ef4444] mr-1"></div><span>Artwork</span></div>
+            </div>
+        </div>
 
+        <!-- Walking Distance legend -->
+        <div class="bg-white p-2 rounded-lg shadow text-xs">
+            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">Walking Distance:</h3>
+            {#if walkingRouteDistance > 0}
+                <div>{Math.round(walkingRouteDistance)} m</div>
+            {:else}
+                <div class="italic">No route calculated</div>
+            {/if}
+        </div>
+    </div>
 </div>
 
 <style>
-    h1 {
-        color: #ff3e00;
-        text-transform: uppercase;
-        font-size: 120%;
-        font-weight: 200;
+    :global(body) {
+        background-color: #f3f4f6;
+    }
+    .btn {
+        @apply font-bold py-2 px-4 rounded;
+    }
+    .btn:disabled {
+        @apply opacity-50 cursor-not-allowed;
     }
 </style>
