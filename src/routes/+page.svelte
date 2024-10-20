@@ -91,28 +91,6 @@
         }
     }
     
-    // Simulate signal strength based on GNSS status or calculated value
-    // Simulate signal strength based on GNSS status or calculated value
-    $: {
-        if (isGNSS) {
-            // Replace this with actual accuracy data if available
-            const accuracy = 10; // Example accuracy value (in meters)
-
-            if (accuracy <= 5) {
-                signalStrength = 5; // Excellent signal
-            } else if (accuracy <= 10) {
-                signalStrength = 4; // Good signal
-            } else if (accuracy <= 20) {
-                signalStrength = 3; // Fair signal
-            } else if (accuracy <= 50) {
-                signalStrength = 2; // Weak signal
-            } else {
-                signalStrength = 1; // Very weak signal
-            }
-        } else {
-            signalStrength = 0; // No GNSS, all bars remain red
-        }
-    }
 
     function getNextMarkerNumber() {
         markerCounter += 1;
@@ -242,7 +220,23 @@
         walkingRouteDistance = turfLength(line, {units: 'meters'});
     }
 
+    async function startRealTimeGNSS() {
+        watchPosition = true; // This will trigger the Geolocation component for real-time monitoring
 
+        try {
+            const { coords, isGNSS: gnssStatus, message, watchId: id } = await getUserLocationWithGNSSStatus();
+            watchId = id;
+            locationMessage = message;
+            isGNSS = gnssStatus; // Update GNSS status
+
+            // Update position
+            watchedPosition = { coords };
+        } catch (error) {
+            console.error("Error starting GNSS monitoring:", error);
+            locationMessage = "Error getting location: " + error.message;
+        }
+    }
+        
     async function calculateWalkingRoute(start, end) {
         const url = `https://router.project-osrm.org/route/v1/walking/${start.lng},${start.lat};${end.lng},${end.lat}?overview=full&geometries=geojson`;
 
@@ -282,13 +276,35 @@
         markerCounter = 0;
     }
 
+    $: {
+        if (isGNSS) {
+            const accuracy = watchedPosition.coords?.accuracy || 100; // Fallback in case there's no accuracy data yet
+
+            if (accuracy <= 5) {
+                signalStrength = 5; // Excellent signal
+            } else if (accuracy <= 10) {
+                signalStrength = 4; // Good signal
+            } else if (accuracy <= 20) {
+                signalStrength = 3; // Fair signal
+            } else if (accuracy <= 50) {
+                signalStrength = 2; // Weak signal
+            } else {
+                signalStrength = 1; // Very weak signal
+            }
+        } else {
+            signalStrength = 0; // No GNSS
+        }
+    }
+
     $: if (watchedPosition.coords) {
         const newPosition = {
             lng: watchedPosition.coords.longitude,
-            lat: watchedPosition.coords.latitude,
+            lat: watchedPosition.coords.latitude
         };
-        watchedMarker = { lngLat: newPosition };
         
+        // Update the marker with the new position
+        watchedMarker = { lngLat: newPosition };
+
         if (gameActive) {
             const newCoords = [newPosition.lng, newPosition.lat];
             
@@ -302,7 +318,7 @@
                 updateWalkingRouteGeojson();
             }
         }
-        
+
         checkProximity();
         checkProximityToPOIs();
     }
