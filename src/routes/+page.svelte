@@ -92,10 +92,23 @@
     }
     
     // Simulate signal strength based on GNSS status or calculated value
-    // You can replace this logic with actual GNSS strength data if available
+    // Simulate signal strength based on GNSS status or calculated value
     $: {
         if (isGNSS) {
-            signalStrength = 3; // Example: if GNSS signal is good, set 3 bars to green
+            // Replace this with actual accuracy data if available
+            const accuracy = 10; // Example accuracy value (in meters)
+
+            if (accuracy <= 5) {
+                signalStrength = 5; // Excellent signal
+            } else if (accuracy <= 10) {
+                signalStrength = 4; // Good signal
+            } else if (accuracy <= 20) {
+                signalStrength = 3; // Fair signal
+            } else if (accuracy <= 50) {
+                signalStrength = 2; // Weak signal
+            } else {
+                signalStrength = 1; // Very weak signal
+            }
         } else {
             signalStrength = 0; // No GNSS, all bars remain red
         }
