@@ -66,6 +66,8 @@
     let lastMedalScore = 0;
     let showMedal = false;    // New state for medal animation
     let medalEarned = false;  // Track if a medal was earned
+    let signalStrength = 0; // Range from 0 to 5 to represent the number of green bars
+    let markerCounter = 0; 
 
     function showMedalAnimation() {
         showMedal = true;
@@ -89,20 +91,19 @@
         }
     }
     
+    // Simulate signal strength based on GNSS status or calculated value
+    // You can replace this logic with actual GNSS strength data if available
+    $: {
+        if (isGNSS) {
+            signalStrength = 3; // Example: if GNSS signal is good, set 3 bars to green
+        } else {
+            signalStrength = 0; // No GNSS, all bars remain red
+        }
+    }
 
-    // Helper function to get the next available marker number
     function getNextMarkerNumber() {
-        let maxNumber = 0;
-        markers.forEach(marker => {
-            const match = marker.label.match(/Marker (\d+)/);
-            if (match) {
-                const number = parseInt(match[1], 10);
-                if (number > maxNumber) {
-                    maxNumber = number;
-                }
-            }
-        });
-        return maxNumber + 1;
+        markerCounter += 1;
+        return markerCounter;
     }
 
     function addMarkerWithNextName(e) {
@@ -112,7 +113,6 @@
             label: `Marker ${newMarkerNumber}`,
             name: `New Place ${newMarkerNumber}`,
             modalShown: false
-            // Remove the image property if it's not being used
         };
         markers = [...markers, newMarker];
         console.log('New marker added:', newMarker);
@@ -134,6 +134,7 @@
 
     function deleteMarker(index) {
         markers = markers.filter((_, i) => i !== index);
+        // We don't decrement markerCounter here to maintain the sequence
     }
 
     function checkProximity() {
@@ -259,11 +260,13 @@
         coords = [position.coords.longitude, position.coords.latitude];
         markers = [...markers, {
             lngLat: { lng: coords[0], lat: coords[1] },
-            label: 'Current', // No name or image for current location
-            name: null,       // Intentionally left null
-            image: null,      // Intentionally left null
+            label: 'Current',
+            name: null,
+            image: null,
             modalShown: false
         }];
+        // Reset markerCounter when adding 'Current' marker
+        markerCounter = 0;
     }
 
     $: if (watchedPosition.coords) {
@@ -343,7 +346,7 @@
         <!-- Geolocation Controls -->
         <div class="col-span-4 md:col-span-1 text-center mt-4"> <!-- Added mt-4 for top margin -->
             <h2 class="font-bold text-[#1e6091] text-lg mb-2">
-                Click button to get a one-time current position
+                Click to get one-time Current Position
             </h2>
             <button class="btn bg-[#1e6091] text-white hover:bg-[#2a7ab0] w-2/5 mb-2" on:click={() => { getPosition = true }}>
                 Get geolocation
@@ -363,7 +366,7 @@
 
         <!-- Watch Position Controls -->
         <div class="col-span-4 md:col-span-1 bg-white p-4 rounded-lg shadow">
-            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Watch Position</h2>
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Watch Real-time Position</h2>
             <button class="btn bg-[#1e6091] text-white hover:bg-[#2a7ab0] w-full mb-2" on:click={() => { watchPosition = true }}>Start watching</button>
             <Geolocation getPosition={watchPosition} options={options} watch={true} on:position={(e) => { watchedPosition = e.detail }} />
             <p class="break-words text-left">watchedPosition: {JSON.stringify(watchedPosition)}</p>
@@ -377,40 +380,39 @@
 
         <!-- Add the new Score Game controls here -->
         <div class="col-span-4 md:col-span-1 bg-white p-4 rounded-lg shadow">
-            <h2 class="font-bold text-[#1e6091] text-lg mb-2">Score Game</h2>
-            <button class="btn bg-green-500 text-white hover:bg-green-600 w-full mb-2" on:click={startGame} disabled={gameActive}>Start Game</button>
-            <button class="btn bg-red-500 text-white hover:bg-red-600 w-full mb-2" on:click={endGame} disabled={!gameActive}>End Game</button>
+            <h2 class="font-bold text-[#1e6091] text-lg mb-2">CultureWalk Melbourne</h2>
+            
+            <!-- Place the Start Game and End Game buttons in a flex container for side-by-side layout -->
+            <div class="flex space-x-2 mb-2">
+                <button class="btn bg-green-500 text-white hover:bg-green-600 w-1/2" on:click={startGame} disabled={gameActive}>
+                    Start Game
+                </button>
+                <button class="btn bg-red-500 text-white hover:bg-red-600 w-1/2" on:click={endGame} disabled={!gameActive}>
+                    End Game
+                </button>
+            </div>
             <button class="btn bg-blue-500 text-white hover:bg-blue-600 w-full mb-2" on:click={clearWalkingRoute} disabled={!gameActive}>
                 Clear Walking Route
             </button>
             <p class="text-sm text-gray-600 mt-2">
                 +50 points for approaching a POI<br>
                 +100 points for approaching a Key POI with IMAGE Popup.<br>
-                Earn a medal for every 100 points!
+                Earn a medal for every 100 points! Players earn points by approaching cultural landmarks and can track their real-time walking distance for health bonuses.
             </p>
         </div>      
     </div>
+
     <!-- Legends below the map -->
     <div class="grid grid-cols-2 gap-4 p-4">
         <!-- POI Types Legend -->
         <div class="bg-white p-2 rounded-lg shadow text-xs">
             <h3 class="text-sm font-bold mb-1 text-[#1e6091]">POI Types:</h3>
-            <div class="flex flex-col space-y-1">
+            <div class="flex flex-row space-x-4">
                 <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#1e6091] mr-1"></div><span>Gallery</span></div>
                 <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#f59e0b] mr-1"></div><span>Museum</span></div>
                 <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#10b981] mr-1"></div><span>Attraction</span></div>
                 <div class="flex items-center"><div class="w-3 h-3 rounded-full bg-[#ef4444] mr-1"></div><span>Artwork</span></div>
             </div>
-        </div>
-
-        <!-- Walking Distance legend -->
-        <div class="bg-white p-2 rounded-lg shadow text-xs">
-            <h3 class="text-sm font-bold mb-1 text-[#1e6091]">Walking Distance:</h3>
-            {#if walkingRouteDistance > 0}
-                <div>{Math.round(walkingRouteDistance)} m</div>
-            {:else}
-                <div class="italic">No route calculated</div>
-            {/if}
         </div>
     </div>
 
@@ -436,7 +438,7 @@
     <!-- Map -->
     <MapLibre 
         center={[144.97, -37.81]} 
-        class="map flex-grow min-h-[calc(100vh-280px)]" 
+        class="map flex-grow min-h-[calc(100vh-280px)] relative"
         standardControls
         style="https://tiles.basemaps.cartocdn.com/gl/voyager-gl-style/style.json" 
         bind:bounds 
@@ -446,15 +448,39 @@
             mapLoaded = true;
         }}
     >
+
+        <!-- Add this part at the top of the map, centered -->
+        <div class="walking-distance-indicator absolute top-4 left-1/2 transform -translate-x-1/2 bg-white bg-opacity-80 px-3 py-1 rounded-full shadow-md z-10">
+            {#if walkingRouteDistance > 0}
+                <div class="text-sm font-semibold">Walking Distance: {Math.round(walkingRouteDistance)} m</div>
+            {:else}
+                <div class="text-sm font-semibold italic">No route calculated</div>
+            {/if}
+        </div>
+               
         <Control class="flex flex-col gap-y-2">
             <ControlGroup>
                 <ControlButton on:click={() => { bounds = getMapBounds(markers) }}>Fit</ControlButton>
             </ControlGroup>
         </Control>
 
-
+        
+        <!-- GNSS Indicator -->
+        <div class="gnss-indicator">
+            <div class="signal-bars">
+                <div class="bar" style="background-color: {signalStrength >= 1 ? 'green' : 'lightgrey'};"></div>
+                <div class="bar" style="background-color: {signalStrength >= 2 ? 'green' : 'lightgrey'};"></div>
+                <div class="bar" style="background-color: {signalStrength >= 3 ? 'green' : 'lightgrey'};"></div>
+                <div class="bar" style="background-color: {signalStrength >= 4 ? 'green' : 'lightgrey'};"></div>
+                <div class="bar" style="background-color: {signalStrength >= 5 ? 'green' : 'lightgrey'};"></div>
+            </div>
+            <div class="gnss-status">
+                <p>{isGNSS ? 'GNSS' : 'No GNSS'}</p>
+            </div>
+        </div>
 
         <MapEvents on:click={addMarkerWithNextName} />
+
 
         {#if showGeoJSON}
             <GeoJSON id="geojsonData" data={geojsonData} promoteId="name">
@@ -478,7 +504,7 @@
             <div transition:fade={{ duration: 500 }}>
                 <Marker lngLat={marker.lngLat} class="grid h-8 w-30 place-items-center rounded-md border border-gray-200 bg-red-300 text-black shadow-2xl focus:outline-2 focus:outline-black">
                     <span class="text-lg flex items-center justify-between w-full px-2">
-                        {marker.label || `Marker ${i + 1}`} {watchedMarker.lngLat ? `(${getDistance([watchedMarker, marker]).toFixed(0)}m)` : ''}
+                        {marker.label || `Marker ${i + 1}`}
                         {#if i >= 9}
                             <button on:click|stopPropagation={() => deleteMarker(i)} class="text-red-600 hover:text-red-800">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -595,5 +621,53 @@
     .bounce {
         animation: bounce 2s ease-in-out 2, spin 1s linear 2s forwards; /* Spin starts after 2 seconds */
     }
-</style>
 
+    /* GNSS indicator styling */
+    .gnss-indicator {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: white;
+        padding: 5px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        min-width: 60px; /* Ensure minimum width to fit "No GNSS" */
+    }
+
+    .signal-bars {
+        display: flex;
+        flex-direction: row;
+        gap: 2px;
+        margin-bottom: 2px;
+    }
+
+    .signal-bars .bar {
+        width: 6px;
+        height: 15px;
+        transition: background-color 0.3s;
+    }
+
+    .gnss-status {
+        font-size: 0.75rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Add this class for walking distance indicator placement */
+    .walking-distance-indicator {
+        position: absolute;
+        top: 10px; /* Top of the map */
+        left: 50%; /* Center horizontally */
+        transform: translateX(-50%); /* Adjust for centering */
+        background-color: white; /* Background for visibility */
+        padding: 8px 12px; /* Padding around the text */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow for elevation */
+        z-index: 1000; /* Keep above map layers */
+    }
+</style>
+ 
